@@ -1,0 +1,13 @@
+
+authenticated.inquiries.form.label.title = Títitulo:
+authenticated.inquiries.form.label.creation = Creación:
+authenticated.inquiries.form.label.deadline = Fecha límite:
+
+authenticated.inquiries.form.label.moneyMin = Dinero mínimo:
+authenticated.inquiries.form.label.moneyMax = Dinero máximo:
+authenticated.inquiries.form.label.paragraph = Descripción:
+authenticated.inquiries.form.label.email = Email:
+
+authenticated.inquiries.form.button.return = Volver
+
+authenticated.inquiries.list.label.title = Título

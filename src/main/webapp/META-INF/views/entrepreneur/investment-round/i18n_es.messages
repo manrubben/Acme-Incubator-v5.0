@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+entrepreneur.investmentRound.list.label.ticker = Ticker
+entrepreneur.investmentRound.list.label.creation = Creación
+entrepreneur.investmentRound.list.label.title = Título
+
+entrepreneur.investmentRound.form.label.ticker = Ticker:
+entrepreneur.investmentRound.form.label.creation = Creación:
+entrepreneur.investmentRound.form.label.round = Ronda:
+entrepreneur.investmentRound.form.label.title = Título:
+entrepreneur.investmentRound.form.label.description = Descripción:
+entrepreneur.investmentRound.form.label.money = Dinero:
+entrepreneur.investmentRound.form.label.link = Enlace:
+
+entrepreneur.investmentRound.error.mensajeRechazo = No es posible publicar la ronda de inversión.
+
+entrepreneur.application.button.list = Listar aplicaciones
+
+entrepreneur.application.form.button.return = Volver

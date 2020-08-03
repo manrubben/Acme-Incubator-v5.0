@@ -1,0 +1,10 @@
+authenticated.overtures.form.label.title = Title:
+authenticated.overtures.form.label.creation = Creation:
+authenticated.overtures.form.label.deadline = Deadline:
+authenticated.overtures.form.label.paragraph = Paragraph:
+authenticated.overtures.form.label.rangeMoney = Range money:
+authenticated.overtures.form.label.email = Email:
+
+authenticated.overtures.form.button.return = Return
+
+authenticated.overtures.list.label.title = Title

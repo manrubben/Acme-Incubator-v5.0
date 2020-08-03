@@ -1,0 +1,9 @@
+anonymous.notices.form.label.headerPicture = Header picture:
+anonymous.notices.form.label.title = Title:
+anonymous.notices.form.label.creation = Creation:
+anonymous.notices.form.label.deadline = Deadline:
+anonymous.notices.form.label.body = Body:
+anonymous.notices.form.label.links = Links:
+
+anonymous.notices.form.button.return = Return
+

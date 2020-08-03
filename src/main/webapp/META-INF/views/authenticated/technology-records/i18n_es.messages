@@ -1,0 +1,12 @@
+authenticated.technology-records.form.label.title = Título:
+authenticated.technology-records.form.label.activitySector = Sector de actividad:
+authenticated.technology-records.form.label.inventorsName = Nombre del inventor:
+authenticated.technology-records.form.label.description = Descripción:
+authenticated.technology-records.form.label.website = Sitio web:
+authenticated.technology-records.form.label.email = Email:
+authenticated.technology-records.form.label.indication = Indicación:
+authenticated.technology-records.form.label.stars = Estrellas:
+
+authenticated.technology-records.form.button.return = Volver
+
+authenticated.technology-records.list.label.title = Título

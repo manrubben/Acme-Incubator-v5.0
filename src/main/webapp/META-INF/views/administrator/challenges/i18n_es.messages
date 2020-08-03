@@ -1,0 +1,32 @@
+###### List ######
+
+administrator.challenges.list.label.title = Título
+administrator.challenges.list.label.deadline = Fecha de vencimiento
+administrator.challenges.list.label.description = Descripción
+
+###### Form ######
+
+administrator.challenges.form.label.title = Título
+administrator.challenges.form.label.deadline = Fecha de vencimiento
+administrator.challenges.form.label.description = Descripción
+administrator.challenges.form.label.expertGoal = Desafio experto 
+administrator.challenges.form.label.averageGoal = Desafio normal 
+administrator.challenges.form.label.rookieGoal = Desafio novato
+administrator.challenges.form.label.expertReward = Recompensa experto
+administrator.challenges.form.label.averageReward= Recompensa normal
+administrator.challenges.form.label.rookieReward = Recompensa novato
+
+administrator.challenges.form.label.expert = Experto
+administrator.challenges.form.label.average = Normal
+administrator.challenges.form.label.rookie = Novato
+###### Button ######
+
+administrator.challenges.form.button.return = Volver atrás
+administrator.challenges.form.button.update = Actualizar
+administrator.challenges.form.button.delete = Eliminar
+administrator.challenges.form.button.create = Crear
+
+administrator.challenges.error.euroZone = Solo se admiten euros
+administrator.challenges.error.rookieReward = La recompesa de novato debe ser menor que la de normal
+administrator.challenges.error.averageReward = La recompensa de normal debe ser menor que la de experto
+

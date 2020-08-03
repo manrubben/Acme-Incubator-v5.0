@@ -1,0 +1,33 @@
+###### List ######
+
+administrator.challenges.list.label.title = Title
+administrator.challenges.list.label.deadline = Deadline
+administrator.challenges.list.label.description = Description
+
+###### Form ######
+
+administrator.challenges.form.label.title = Name
+administrator.challenges.form.label.deadline = Deadline
+administrator.challenges.form.label.description = Description
+administrator.challenges.form.label.expertGoal = Expert goal
+administrator.challenges.form.label.averageGoal = Average goal
+administrator.challenges.form.label.rookieGoal = Rookie goal
+administrator.challenges.form.label.expertReward = Expert reward
+administrator.challenges.form.label.averageReward= Average reward
+administrator.challenges.form.label.rookieReward = Rookie reward
+
+administrator.challenges.form.label.expert = Expert
+administrator.challenges.form.label.average = Average
+administrator.challenges.form.label.rookie = Rookie
+
+###### Button ######
+
+administrator.challenges.form.button.return = Return
+administrator.challenges.form.button.update = Update
+administrator.challenges.form.button.delete = Delete
+administrator.challenges.form.button.create = Create
+
+administrator.challenges.error.euroZone = Only euro currency supported
+
+administrator.challenges.error.rookieReward = Rookie reward must be lower than Average reward
+administrator.challenges.error.averageReward = Average reward must be lower than Expert reward

@@ -1,0 +1,10 @@
+authenticated.notices.form.label.headerPicture = Header picture:
+authenticated.notices.form.label.title = Title:
+authenticated.notices.form.label.creation = Creation:
+authenticated.notices.form.label.deadline = Deadline:
+authenticated.notices.form.label.body = Body:
+authenticated.notices.form.label.links = Links:
+
+authenticated.notices.form.button.return = Return
+
+authenticated.notices.list.label.title = Title

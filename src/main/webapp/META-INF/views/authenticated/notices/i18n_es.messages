@@ -1,0 +1,10 @@
+authenticated.notices.form.label.headerPicture = Imagen de cabecera:
+authenticated.notices.form.label.title = Título:
+authenticated.notices.form.label.creation = Fecha de creación:
+authenticated.notices.form.label.deadline = Fecha límite:
+authenticated.notices.form.label.body = Cuerpo:
+authenticated.notices.form.label.links = Enlaces:
+
+authenticated.notices.form.button.return = Volver
+
+authenticated.notices.list.label.title = Título

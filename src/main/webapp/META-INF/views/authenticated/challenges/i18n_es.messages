@@ -1,0 +1,24 @@
+###### List ######
+
+authenticated.challenges.list.label.title = Título
+authenticated.challenges.list.label.deadline = Fecha de vencimiento
+authenticated.challenges.list.label.description = Descripción
+
+###### Form ######
+
+authenticated.challenges.form.label.title = Título
+authenticated.challenges.form.label.deadline = Fecha de vencimiento
+authenticated.challenges.form.label.description = Descripción
+authenticated.challenges.form.label.expertGoal = Desafio experto 
+authenticated.challenges.form.label.averageGoal = Desafio normal 
+authenticated.challenges.form.label.rookieGoal = Desafio novato
+authenticated.challenges.form.label.expertReward = Recompensa experto
+authenticated.challenges.form.label.averageReward= Recompensa normal
+authenticated.challenges.form.label.rookieReward = Recompensa novato
+
+authenticated.challenges.form.label.expert = Experto
+authenticated.challenges.form.label.average = Normal
+authenticated.challenges.form.label.rookie = Novato
+###### Button ######
+
+authenticated.challenges.form.button.return = Volver atrás

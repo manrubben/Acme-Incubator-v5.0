@@ -1,0 +1,25 @@
+###### List ######
+
+authenticated.challenges.list.label.title = Title
+authenticated.challenges.list.label.deadline = Deadline
+authenticated.challenges.list.label.description = Description
+
+###### Form ######
+
+authenticated.challenges.form.label.title = Name
+authenticated.challenges.form.label.deadline = Deadline
+authenticated.challenges.form.label.description = Description
+authenticated.challenges.form.label.expertGoal = Expert goal
+authenticated.challenges.form.label.averageGoal = Average goal
+authenticated.challenges.form.label.rookieGoal = Rookie goal
+authenticated.challenges.form.label.expertReward = Expert reward
+authenticated.challenges.form.label.averageReward= Average reward
+authenticated.challenges.form.label.rookieReward = Rookie reward
+
+authenticated.challenges.form.label.expert = Expert
+authenticated.challenges.form.label.average = Average
+authenticated.challenges.form.label.rookie = Rookie
+
+###### Button ######
+
+authenticated.challenges.form.button.return = Return

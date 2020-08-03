@@ -1,0 +1,11 @@
+
+investor.application.form.label.ticker = Ticker:
+investor.application.form.label.creation = Creation Date:
+investor.application.form.label.statement = Statement:
+investor.application.form.label.money = Money:
+
+investor.application.form.button.return = Return
+
+investor.application.list.label.creation = Creation date
+investor.application.list.label.statement = Statement
+investor.application.list.label.money = Money

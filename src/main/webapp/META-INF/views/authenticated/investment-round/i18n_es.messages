@@ -1,0 +1,12 @@
+authenticated.investment-round.form.label.ticker = Ticket:
+authenticated.investment-round.form.label.creation = Fecha de creación:
+authenticated.investment-round.form.label.round = Ronda:
+authenticated.investment-round.form.label.description = Descripción:
+authenticated.investment-round.form.label.title = Título:
+authenticated.investment-round.form.label.money = Cantidad de dinero:
+authenticated.investment-round.form.label.link = Link:
+
+authenticated.investment-round.form.button.return = Return
+
+authenticated.investment-round.list.label.title = Título
+authenticated.investment-round.list.label.entrepreneur = Empresario

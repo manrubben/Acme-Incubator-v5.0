@@ -1,0 +1,28 @@
+
+
+administrator.technology-records.form.button.update = Actualizar
+administrator.technology-records.form.button.show = Crear
+administrator.technology-records.form.button.delete = Borrar
+
+
+administrator.technology-records.form.label.title = Título:
+administrator.technology-records.form.label.activitySector = Sector de actividad:
+administrator.technology-records.form.label.inventorsName = Nombre del inventor:
+administrator.technology-records.form.label.description = Descripción:
+administrator.technology-records.form.label.website = Sitio web:
+administrator.technology-records.form.label.email = Email:
+administrator.technology-records.form.label.indication = Indicación:
+administrator.technology-records.form.label.stars = Estrellas:
+
+
+administrator.technology-records.list.label.title = Título:
+administrator.technology-records.list.label.activitySector = Sector de actividad:
+administrator.technology-records.list.label.inventorsName = Nombre del inventor:
+administrator.technology-records.list.label.description = Descripción:
+
+administrator.technology-records.form.button.create = Crear
+administrator.technology-records.form.button.update = Actualizar
+administrator.technology-records.form.button.delete = Eliminar
+administrator.technology-records.form.button.return = Volver
+
+administrator.technology-records.list.label.title = Título
