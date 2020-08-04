@@ -18,11 +18,11 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/tool-records/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/tool-records/list.jsp" />
+	<definition name="anonymous/tool-records/list" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/tool-records/list.jsp" />
 	</definition>
-	<definition name="administrator/tool-records/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/tool-records/form.jsp" />
+	<definition name="anonymous/tool-records/form" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/tool-records/form.jsp" />
 	</definition>
 
 </tiles-definitions>
