@@ -33,7 +33,7 @@ public class InvestmentRound extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$")
+	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$", message = "{entrepreneur.investment-round.error.ticker-pattern}")
 	private String				ticker;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")

@@ -54,6 +54,7 @@ master.menu.authenticated.investment-round = Listar rondas de inversiones
 
 master.menu.entrepreneur = Empresario
 master.menu.entrepreneur.investmentRound.list-mine = Listar rondas de inversión
+master.menu.entrepreneur.investmentRound.create = Crear ronda de inversión
 
 # master.menu.administrator ###################################################
 
