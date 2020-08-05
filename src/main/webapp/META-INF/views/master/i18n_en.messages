@@ -53,7 +53,7 @@ master.menu.authenticated.investment-round = List investment rounds
 # master.menu.entrepreneur ###################################################
 
 master.menu.entrepreneur = Entrepreneur
-master.menu.entrepreneur.investmentRound.list-mine = List investment rounds
+master.menu.entrepreneur.investmentRound.list = List investment rounds
 
 # master.menu.administrator ###################################################
 
