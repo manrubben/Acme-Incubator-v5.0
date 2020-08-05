@@ -54,6 +54,7 @@ master.menu.authenticated.investment-round = List investment rounds
 
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investmentRound.list = List investment rounds
+master.menu.entrepreneur.investmentRound.create = Create investment round
 
 # master.menu.administrator ###################################################
 
