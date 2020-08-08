@@ -1,0 +1,15 @@
+###### Form ######
+
+authenticated.entrepreneur.form.title.create = Become an entrepreneur
+authenticated.entrepreneur.form.title.update = Update entrepreneur data
+
+authenticated.entrepreneur.form.label.name = Name: 
+authenticated.entrepreneur.form.label.sector = Sector:
+authenticated.entrepreneur.form.label.qualification = Qualification:
+authenticated.entrepreneur.form.label.skills = Skills:
+
+###### Button ######
+
+authenticated.entrepreneur.form.button.create = Create
+authenticated.entrepreneur.form.button.update = Update
+authenticated.entrepreneur.form.button.return = Return

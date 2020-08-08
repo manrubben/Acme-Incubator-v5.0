@@ -27,7 +27,7 @@ public class Entrepreneur extends UserRole {
 	private String				sector;
 
 	@NotNull
-	private Integer				qualification;
+	private String				qualification;
 
 	@NotNull
 	private String				skills;
