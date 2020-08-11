@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Challenges;
+import acme.entities.Configuration;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -17,5 +18,8 @@ public interface AdministratorChallengeRepository extends AbstractRepository {
 
 	@Query("select c from Challenges c where (c.deadline >= current_date())")
 	Collection<Challenges> findManyChallenges();
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }

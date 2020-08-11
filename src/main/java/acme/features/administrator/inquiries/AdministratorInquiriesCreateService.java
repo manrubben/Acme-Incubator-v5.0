@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.Inquiries;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -18,6 +19,7 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 
 	@Autowired
 	private AdministratorInquiriesRepository repository;
+
 
 	@Override
 	public boolean authorise(final Request<Inquiries> request) {
@@ -64,6 +66,24 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("title")) {
+			boolean isSpam = config.isSpam(entity.getTitle());
+			errors.state(request, !isSpam, "title", "administrator.inquiries.error.spam");
+		}
+
+		if (!errors.hasErrors("paragraph")) {
+			boolean isSpam = config.isSpam(entity.getParagraph());
+			errors.state(request, !isSpam, "paragraph", "administrator.inquiries.error.spam");
+		}
+
+		if (!errors.hasErrors("email")) {
+			boolean isSpam = config.isSpam(entity.getEmail());
+			errors.state(request, !isSpam, "email", "administrator.inquiries.error.spam");
+		}
 
 		if (!errors.hasErrors("moneyMin")) {
 			Boolean isEur = entity.getMoneyMin().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");

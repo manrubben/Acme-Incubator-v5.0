@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.Notices;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
@@ -69,6 +70,24 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("headerPicture")) {
+			boolean isSpam = config.isSpam(entity.getHeaderPicture());
+			errors.state(request, !isSpam, "headerPicture", "administrator.headerPicture.error.spam");
+		}
+
+		if (!errors.hasErrors("body")) {
+			boolean isSpam = config.isSpam(entity.getBody());
+			errors.state(request, !isSpam, "body", "administrator.body.error.spam");
+		}
+
+		if (!errors.hasErrors("links")) {
+			boolean isSpam = config.isSpam(entity.getLinks());
+			errors.state(request, !isSpam, "links", "administrator.links.error.spam");
+		}
 
 		if (!errors.hasErrors("accept")) {
 			Boolean isAccepted = request.getModel().getBoolean("accept");

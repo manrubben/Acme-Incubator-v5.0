@@ -6,6 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -28,9 +29,8 @@ public class ToolRecords extends DomainEntity {
 	@Length(max = 255)
 	private String				title;
 
-	@NotBlank
-	@Length(max = 255)
-	private String				activitySector;
+	@NotNull
+	private ActivitySector		activitySector;
 
 	@NotBlank
 	@Length(max = 255)

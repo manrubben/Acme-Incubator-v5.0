@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Configuration;
 import acme.entities.Overtures;
 import acme.framework.repositories.AbstractRepository;
 
@@ -20,4 +21,7 @@ public interface AdministratorOverturesRepository extends AbstractRepository {
 
 	@Query("select o from Overtures o where (o.deadline >= CURRENT_TIMESTAMP)")
 	Collection<Overtures> findManyAllActives();
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 }

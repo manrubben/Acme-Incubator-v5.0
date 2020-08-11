@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
@@ -73,9 +74,22 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		assert entity != null;
 		assert errors != null;
 
-		if (!errors.hasErrors("round")) {
-			Boolean formatRound = entity.getRound().matches("SEED|ANGEL|SERIES-A|SERIES-B|SERIES-C|BRIDGE");
-			errors.state(request, formatRound, "round", "entrepreneur.investment-round.error.round");
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("title")) {
+			boolean isSpam = config.isSpam(entity.getTitle());
+			errors.state(request, !isSpam, "title", "entrepreneur.investment-round.error.spam");
+		}
+
+		if (!errors.hasErrors("description")) {
+			boolean isSpam = config.isSpam(entity.getDescription());
+			errors.state(request, !isSpam, "description", "entrepreneur.investment-round.error.spam");
+		}
+
+		if (!errors.hasErrors("link")) {
+			boolean isSpam = config.isSpam(entity.getLink());
+			errors.state(request, !isSpam, "link", "entrepreneur.investment-round.error.spam");
 		}
 
 		if (!errors.hasErrors("money")) {

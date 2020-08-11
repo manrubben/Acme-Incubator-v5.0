@@ -15,6 +15,7 @@ package acme.features.authenticated.consumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
@@ -49,6 +50,19 @@ public class AuthenticatedConsumerUpdateService implements AbstractUpdateService
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("company")) {
+			boolean isSpam = config.isSpam(entity.getCompany());
+			errors.state(request, !isSpam, "company", "authenticated.consumer.error.spam");
+		}
+
+		if (!errors.hasErrors("sector")) {
+			boolean isSpam = config.isSpam(entity.getSector());
+			errors.state(request, !isSpam, "sector", "authenticated.consumer.error.spam");
+		}
 	}
 
 	@Override
