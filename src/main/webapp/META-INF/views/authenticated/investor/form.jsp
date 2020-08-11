@@ -21,6 +21,7 @@
 	<acme:form-textarea code="authenticated.investor.form.label.profile" path="profile"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.investor.form.button.create" action="/authenticated/investor/create"/>
+	<acme:form-submit test="${command == 'update'}" code="authenticated.investor.form.button.update" action="/authenticated/investor/update"/>
 	
 	<acme:form-return code="authenticated.investor.form.button.return"/>
 </acme:form>

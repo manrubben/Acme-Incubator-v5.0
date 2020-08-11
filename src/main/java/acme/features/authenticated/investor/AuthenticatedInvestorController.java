@@ -19,7 +19,10 @@ public class AuthenticatedInvestorController extends AbstractController<Authenti
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInvestorCreateService createService;
+	private AuthenticatedInvestorCreateService	createService;
+
+	@Autowired
+	private AuthenticatedInvestorUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -27,6 +30,7 @@ public class AuthenticatedInvestorController extends AbstractController<Authenti
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }
