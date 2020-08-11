@@ -64,6 +64,12 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 		assert entity != null;
 		assert errors != null;
 
+		Integer countOfApplications = this.repository.findCountOfApplicationByInvestmentRoundId(entity.getId());
+		if (countOfApplications == null) {
+			countOfApplications = 0;
+		}
+		errors.state(request, countOfApplications == 0, "finalMode", "You can not delete an inversion with aplications");
+
 	}
 
 	@Override
