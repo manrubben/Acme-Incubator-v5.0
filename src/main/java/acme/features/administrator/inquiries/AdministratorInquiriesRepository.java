@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Configuration;
 import acme.entities.Inquiries;
 import acme.framework.repositories.AbstractRepository;
 
@@ -17,5 +18,8 @@ public interface AdministratorInquiriesRepository extends AbstractRepository {
 
 	@Query("select n from Inquiries n")
 	Collection<Inquiries> findManyAll();
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }

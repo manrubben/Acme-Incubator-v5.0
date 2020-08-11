@@ -9,6 +9,7 @@ package acme.features.authenticated.entrepreneur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
@@ -81,6 +82,29 @@ public class AuthenticatedEntrepreneurCreateService implements AbstractCreateSer
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("name")) {
+			boolean isSpam = config.isSpam(entity.getName());
+			errors.state(request, !isSpam, "name", "authenticated.entrepreneur.error.spam");
+		}
+
+		if (!errors.hasErrors("sector")) {
+			boolean isSpam = config.isSpam(entity.getSector());
+			errors.state(request, !isSpam, "sector", "authenticated.entrepreneur.error.spam");
+		}
+
+		if (!errors.hasErrors("qualification")) {
+			boolean isSpam = config.isSpam(entity.getQualification());
+			errors.state(request, !isSpam, "qualification", "authenticated.entrepreneur.error.spam");
+		}
+
+		if (!errors.hasErrors("skills")) {
+			boolean isSpam = config.isSpam(entity.getSkills());
+			errors.state(request, !isSpam, "skills", "authenticated.entrepreneur.error.spam");
+		}
 	}
 
 	@Override

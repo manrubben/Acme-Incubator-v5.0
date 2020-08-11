@@ -17,6 +17,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Configuration;
 import acme.entities.Notices;
 import acme.framework.repositories.AbstractRepository;
 
@@ -28,5 +29,8 @@ public interface AdministratorNoticesRepository extends AbstractRepository {
 
 	@Query("select n from Notices n")
 	Collection<Notices> findManyAll();
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }

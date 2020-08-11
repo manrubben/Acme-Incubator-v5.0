@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Configuration;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.repositories.AbstractRepository;
@@ -21,5 +22,8 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select i from InvestmentRound i where i.entrepreneur.id =?1")
 	Collection<InvestmentRound> findManyByEntrepreneurId(int entrepreneurId);
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }
