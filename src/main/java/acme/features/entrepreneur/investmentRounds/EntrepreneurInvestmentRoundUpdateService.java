@@ -24,7 +24,14 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+
+		int investRoundId = request.getModel().getInteger("id");
+		InvestmentRound investRound = this.repository.findOneById(investRoundId);
+
+		result = !investRound.getFinalMode();
+
+		return result;
 	}
 
 	@Override
@@ -42,7 +49,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "link");
+		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "link", "finalMode");
 	}
 
 	@Override

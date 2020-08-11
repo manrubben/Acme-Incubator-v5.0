@@ -59,6 +59,9 @@ public class InvestmentRound extends DomainEntity {
 	@URL
 	private String				link;
 
+	@NotNull
+	private Boolean				finalMode;
+
 	// Relationships ----------------------------------------------------------
 
 	@NotNull

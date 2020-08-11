@@ -103,6 +103,7 @@
         `version` integer not null,
         `creation` datetime(6),
         `description` varchar(255),
+        `final_mode` bit,
         `link` varchar(255),
         `money_amount` double precision,
         `money_currency` varchar(255),

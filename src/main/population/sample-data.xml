@@ -242,6 +242,7 @@
 		<property name="description" value="Hello!" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
