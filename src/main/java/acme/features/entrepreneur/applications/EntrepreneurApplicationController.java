@@ -18,15 +18,20 @@ import acme.framework.controllers.AbstractController;
 public class EntrepreneurApplicationController extends AbstractController<Entrepreneur, Application> {
 
 	@Autowired
-	private EntrepreneurApplicationListService	listService;
+	private EntrepreneurApplicationListService		listService;
 
 	@Autowired
-	private EntrepreneurApplicationShowService	showService;
+	private EntrepreneurApplicationShowService		showService;
+
+	@Autowired
+	private EntrepreneurApplicationUpdateService	updateService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_INVESTMENT_ROUNDS_APP, BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+
 	}
 }
