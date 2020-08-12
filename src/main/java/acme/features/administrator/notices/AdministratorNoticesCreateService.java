@@ -93,6 +93,13 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 			Boolean isAccepted = request.getModel().getBoolean("accept");
 			errors.state(request, isAccepted, "accept", "administrator.notices.error.must-accept");
 		}
+
+		boolean isAfter = entity.getDeadline().isAfter(entity.getCreation());
+		if (!isAfter) {
+			if (!errors.hasErrors("deadline")) {
+				errors.state(request, isAfter, "deadline", "administrator.notices.error.deadlineIsAfter");
+			}
+		}
 	}
 
 	@Override
