@@ -81,6 +81,26 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 			errors.state(request, isEur, "money", "entrepreneur.investment-round.error.money");
 		}
 
+		if (!errors.hasErrors()) {
+			if (entity.getFinalMode()) {
+				int investmentRoundId = entity.getId();
+				Double totalBudget = this.repository.findTotalDedicationByInvestmentRoundId(investmentRoundId);
+
+				if (totalBudget == null) {
+					totalBudget = 0.0;
+				}
+
+				InvestmentRound investmentRound1 = this.repository.findOneById(investmentRoundId);
+
+				Double dinero = investmentRound1.getMoney().getAmount();
+
+				boolean sumaCorrecta = totalBudget == dinero;
+				errors.state(request, sumaCorrecta, "finalMode", "The money does not match the budget");
+
+				request.getModel().setAttribute("finalMode", sumaCorrecta);
+			}
+		}
+
 	}
 
 	@Override

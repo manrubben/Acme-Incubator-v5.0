@@ -25,4 +25,7 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 	@Query("select count(a) from Application a where a.investmentRound.id = ?1")
 	Integer findCountOfApplicationByInvestmentRoundId(int InvestmentRoundId);
 
+	@Query("select sum(d.budget.amount) from Activity d where d.investmentRound.id = ?1")
+	Double findTotalDedicationByInvestmentRoundId(int investmentRoundId);
+
 }
