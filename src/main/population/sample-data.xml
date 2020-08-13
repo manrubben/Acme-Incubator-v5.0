@@ -111,6 +111,16 @@
 		<property name="email" value="josema@gmail.com" />
 	</bean>
 	
+	<bean id="inquirie02" class="acme.entities.Inquiries">
+		<property name="title" value="Inquirie 2" />
+		<property name="creation" value="13-07-2020 18:53" />
+		<property name="deadline" value="21-10-2021 12:00" />
+		<property name="paragraph" value="This is a sample paragraph" />
+		<property name="moneyMin" value="€35,000.00" />
+		<property name="moneyMax" value="€45,000.00" />
+		<property name="email" value="josema@gmail.com" />
+	</bean>
+	
 	<!-- Challenges -->
 	
 	<bean id="challenge01" class="acme.entities.Challenges">

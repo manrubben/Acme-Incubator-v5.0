@@ -20,7 +20,6 @@ entrepreneur.application.form.label.justification = Justification:
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creation
-entrepreneur.application.list.label.status = Status
 
 entrepreneur.application.form.button.update = Update
 
