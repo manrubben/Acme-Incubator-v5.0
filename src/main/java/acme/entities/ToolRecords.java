@@ -49,9 +49,8 @@ public class ToolRecords extends DomainEntity {
 	@Length(max = 255)
 	private String				email;
 
-	@NotBlank
-	@Length(max = 255)
-	private String				indication;
+	@NotNull
+	private Indication			indication;
 
 	@Min(value = -5)
 	@Max(value = 5)
