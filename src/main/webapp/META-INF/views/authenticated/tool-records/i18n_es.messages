@@ -10,3 +10,5 @@ authenticated.tool-records.form.label.stars = Estrellas:
 authenticated.tool-records.form.button.return = Volver
 
 authenticated.tool-records.list.label.title = Título
+authenticated.tool-records.list.label.activitySector = Sector de actividad
+authenticated.tool-records.list.label.stars = Estrellas

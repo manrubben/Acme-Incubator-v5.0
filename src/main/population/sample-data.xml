@@ -39,7 +39,7 @@
 			value="This is a sample description" />
 		<property name="website" value="http://www.peter.com" />
 		<property name="email" value="peter@gmail.com" />
-		<property name="indication" value="open-source" />
+		<property name="indication" value="open_source" />
 		<property name="stars" value="5" />
 	</bean>
 
@@ -53,7 +53,7 @@
 			value="This is a sample description" />
 		<property name="website" value="http://www.henry.com" />
 		<property name="email" value="henry@gmail.com" />
-		<property name="indication" value="closed-source" />
+		<property name="indication" value="closed_source" />
 		<property name="stars" value="4" />
 	</bean>
 	
@@ -64,7 +64,7 @@
 		<property name="description" value="This is a sample description" />
 		<property name="website" value="http://www.mark.com" />
 		<property name="email" value="mark@gmail.com"/>
-		<property name="indication" value="closed-source"/>
+		<property name="indication" value="closed_source"/>
 		<property name="stars" value="5"/>
 	</bean>
 

@@ -94,7 +94,7 @@ public class AdministratorToolRecordsUpdateService implements AbstractUpdateServ
 		}
 
 		if (!errors.hasErrors("indication")) {
-			boolean isSpam = config.isSpam(entity.getIndication());
+			boolean isSpam = config.isSpam(entity.getIndication().toString());
 			errors.state(request, !isSpam, "indication", "administrator.tool-records.error.spam");
 		}
 

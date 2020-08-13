@@ -10,3 +10,5 @@ authenticated.tool-records.form.label.stars = Stars:
 authenticated.tool-records.form.button.return = Return
 
 authenticated.tool-records.list.label.title = Title
+authenticated.tool-records.list.label.activitySector = Activity sector
+authenticated.tool-records.list.label.stars = Stars

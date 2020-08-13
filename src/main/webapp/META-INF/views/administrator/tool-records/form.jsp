@@ -17,12 +17,25 @@
 
 <acme:form>
 	<acme:form-textbox code="administrator.tool-records.form.label.title" path="title"/>
-	<acme:form-textbox code="administrator.tool-records.form.label.activitySector" path="activitySector"/>
+	
+	<acme:form-select  code="administrator.tool-records.form.label.activitySector" path="activitySector">
+		<acme:form-option code="administrator.tool-records.form.label.activitySector.technology" value="Technology"/>
+		<acme:form-option code="administrator.tool-records.form.label.activitySector.science" value="Science"/>
+		<acme:form-option code="administrator.tool-records.form.label.activitySector.arts" value="Arts"/>
+		<acme:form-option code="administrator.tool-records.form.label.activitySector.business" value="Business"/>
+		<acme:form-option code="administrator.tool-records.form.label.activitySector.health" value="Health"/>
+	</acme:form-select>
+	
 	<acme:form-textbox code="administrator.tool-records.form.label.inventorsName" path="inventorsName"/>
 	<acme:form-textarea code="administrator.tool-records.form.label.description" path="description"/>
 	<acme:form-url code="administrator.tool-records.form.label.website" path="website"/>
 	<acme:form-textbox code="administrator.tool-records.form.label.email" path="email"/>
-	<acme:form-textbox code="administrator.tool-records.form.label.indication" path="indication"/>
+	
+	<acme:form-select  code="administrator.tool-records.form.label.indication" path="indication">
+		<acme:form-option code="administrator.tool-records.form.label.indication.open-source" value="open_source"/>
+		<acme:form-option code="administrator.tool-records.form.label.indication.closed-source" value="closed_source"/>
+	</acme:form-select>
+	
 	<acme:form-integer code="administrator.tool-records.form.label.stars" path="stars" placeholder="-5 - 5"/>
 	
 	<acme:form-submit test="${command == 'show'}" code="administrator.tool-records.form.button.update"
