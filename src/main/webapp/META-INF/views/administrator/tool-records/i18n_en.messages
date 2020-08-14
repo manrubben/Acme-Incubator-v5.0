@@ -14,7 +14,7 @@ administrator.tool-records.list.label.stars = Stars
 
 administrator.tool-records.form.label.title = Title:
 administrator.tool-records.form.label.activitySector = Activity Sector:
-administrator.tool-records.form.label.inventorsName = inventorsName:
+administrator.tool-records.form.label.inventorsName = Inventor's name:
 administrator.tool-records.form.label.description = Description:
 administrator.tool-records.form.label.website = Website:
 administrator.tool-records.form.label.email = Email:
