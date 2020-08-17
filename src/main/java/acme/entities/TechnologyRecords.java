@@ -56,8 +56,7 @@ public class TechnologyRecords extends DomainEntity {
 	@Length(max = 255)
 	private String				email;
 
-	@NotBlank
-	@Length(max = 255)
+	@NotNull
 	private String				indication;
 
 	@Min(value = -5)
