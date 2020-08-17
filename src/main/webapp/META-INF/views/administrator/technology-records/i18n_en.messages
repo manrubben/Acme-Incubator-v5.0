@@ -4,7 +4,6 @@ administrator.technology-records.form.button.show = Create
 administrator.technology-records.form.button.delete = Delete
 
 
-
 administrator.technology-records.form.label.title = Title:
 administrator.technology-records.form.label.activitySector = Activity sector:
 administrator.technology-records.form.label.inventorsName = Inventor's name:
@@ -15,14 +14,18 @@ administrator.technology-records.form.label.indication = Indication:
 administrator.technology-records.form.label.stars = Stars:
 
 
-administrator.technology-records.list.label.title = Title
 administrator.technology-records.list.label.activitySector = Activity sector
-administrator.technology-records.list.label.inventorsName = Inventor's name
-administrator.technology-records.list.label.description = Description
 
 administrator.technology-records.form.button.create = Create
 administrator.technology-records.form.button.update = Update
 administrator.technology-records.form.button.delete = Delete
 administrator.technology-records.form.button.return = Return
 
-administrator.technology-records.list.label.title = Title
+administrator.technology-records.form.label.activitySector.technology = Technology
+administrator.technology-records.form.label.activitySector.science = Science
+administrator.technology-records.form.label.activitySector.arts = Arts
+administrator.technology-records.form.label.activitySector.business = Business
+administrator.technology-records.form.label.activitySector.health = Health
+
+administrator.technology-records.form.label.indication.open-source = Open source
+administrator.technology-records.form.label.indication.closed-source = Closed source
