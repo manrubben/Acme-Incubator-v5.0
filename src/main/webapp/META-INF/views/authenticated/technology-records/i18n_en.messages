@@ -9,4 +9,4 @@ authenticated.technology-records.form.label.stars = Stars:
 
 authenticated.technology-records.form.button.return = Return
 
-authenticated.technology-records.list.label.title = Title
+authenticated.technology-records.list.label.activitySector = Activity Sector

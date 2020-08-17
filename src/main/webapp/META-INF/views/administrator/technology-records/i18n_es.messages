@@ -15,10 +15,10 @@ administrator.technology-records.form.label.indication = Indicación:
 administrator.technology-records.form.label.stars = Estrellas:
 
 
-administrator.technology-records.list.label.title = Título:
-administrator.technology-records.list.label.activitySector = Sector de actividad:
-administrator.technology-records.list.label.inventorsName = Nombre del inventor:
-administrator.technology-records.list.label.description = Descripción:
+administrator.technology-records.list.label.title = Título
+administrator.technology-records.list.label.activitySector = Sector de actividad
+administrator.technology-records.list.label.inventorsName = Nombre del inventor
+administrator.technology-records.list.label.description = Descripción
 
 administrator.technology-records.form.button.create = Crear
 administrator.technology-records.form.button.update = Actualizar
