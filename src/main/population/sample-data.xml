@@ -33,7 +33,7 @@
 	<bean id="technologyRecord01"
 		class="acme.entities.TechnologyRecords">
 		<property name="title" value="Sample Technology Record" />
-		<property name="activitySector" value="Sector 1" />
+		<property name="activitySector" value="Arts" />
 		<property name="inventorsName" value="Peter" />
 		<property name="description"
 			value="This is a sample description" />
@@ -47,7 +47,7 @@
 
 	<bean id="toolRecord01" class="acme.entities.ToolRecords">
 		<property name="title" value="Sample Tool Record" />
-		<property name="activitySector" value="Sector 1" />
+		<property name="activitySector" value="Science" />
 		<property name="inventorsName" value="Henry" />
 		<property name="description"
 			value="This is a sample description" />
@@ -59,7 +59,7 @@
 	
 	<bean id="toolRecord02" class="acme.entities.ToolRecords">
 		<property name="title" value="Sample Tool Record 2" />
-		<property name="activitySector" value="Sector 2" />
+		<property name="activitySector" value="Health" />
 		<property name="inventorsName" value="Mark" />
 		<property name="description" value="This is a sample description" />
 		<property name="website" value="http://www.mark.com" />

@@ -53,7 +53,7 @@ master.menu.authenticated.investment-round = List investment rounds
 # master.menu.entrepreneur ###################################################
 
 master.menu.entrepreneur = Entrepreneur
-master.menu.entrepreneur.investmentRound.list = List investment rounds
+master.menu.entrepreneur.investmentRound.list-mine = List investment rounds
 master.menu.entrepreneur.investmentRound.create = Create investment round
 
 # master.menu.administrator ###################################################
@@ -63,8 +63,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notices = List notices
 master.menu.administrator.create-tool-records = Create tool record
 master.menu.administrator.list-tool-records = List tool records
-master.menu.administrator.technology-records.create = Create technology Record
-master.menu.administrator.technology-records.list = List technology Records
+master.menu.administrator.technology-records.create = Create technology record
+master.menu.administrator.technology-records.list = List technology records
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.inquiries.list = List inquiries
 master.menu.administrator.inquiries.create = Create inquirie
