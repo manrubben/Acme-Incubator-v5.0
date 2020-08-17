@@ -40,6 +40,9 @@ public class Application extends DomainEntity {
 	@NotNull
 	private LocalDateTime		creation;
 
+	@NotNull
+	private ApplicationStatus	status;
+
 	@NotBlank
 	@Length(max = 255)
 	private String				statement;
@@ -47,6 +50,9 @@ public class Application extends DomainEntity {
 	@NotNull
 	@Valid
 	private Money				money;
+
+	@Length(max = 255)
+	private String				justification;
 
 	// Relationships ----------------------------------------------------------
 

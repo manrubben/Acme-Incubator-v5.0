@@ -10,10 +10,17 @@
 
 entrepreneur.application.form.label.ticker = Ticker:
 entrepreneurr.application.form.label.creation = Creación:
+entrepreneur.application.form.label.status = Estado:
+entrepreneur.application.form.label.status.pending = PENDIENTE
+entrepreneur.application.form.label.status.accept = ACEPTAR
+entrepreneur.application.form.label.status.reject = RECHAZAR
 entrepreneur.application.form.label.statement = Declaración:
 entrepreneur.application.form.label.money = Dinero:
+entrepreneur.application.form.label.justification = Justificación:
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creación
+
+entrepreneur.application.form.button.update = Actualizar
 
 entrepreneur.application.form.button.return = Volver

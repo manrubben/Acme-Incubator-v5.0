@@ -7,7 +7,7 @@ administrator.challenges.list.label.description = Descripción
 ###### Form ######
 
 administrator.challenges.form.label.title = Título
-administrator.challenges.form.label.deadline = Fecha de vencimiento
+administrator.challenges.form.label.deadline = Fecha límite
 administrator.challenges.form.label.description = Descripción
 administrator.challenges.form.label.expertGoal = Desafio experto 
 administrator.challenges.form.label.averageGoal = Desafio normal 
@@ -29,4 +29,5 @@ administrator.challenges.form.button.create = Crear
 administrator.challenges.error.euroZone = Solo se admiten euros
 administrator.challenges.error.rookieReward = La recompesa de novato debe ser menor que la de normal
 administrator.challenges.error.averageReward = La recompensa de normal debe ser menor que la de experto
+administrator.challenges.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
 

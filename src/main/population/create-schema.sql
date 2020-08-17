@@ -29,9 +29,11 @@
        `id` integer not null,
         `version` integer not null,
         `creation` datetime(6),
+        `justification` varchar(255),
         `money_amount` double precision,
         `money_currency` varchar(255),
         `statement` varchar(255),
+        `status` integer,
         `ticker` varchar(255),
         `investment_round_id` integer not null,
         `investor_id` integer not null,
@@ -63,6 +65,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `configuration` (
+       `id` integer not null,
+        `version` integer not null,
+        `spam_threshold` double precision,
+        `spam_words` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
@@ -77,7 +87,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `name` varchar(255),
-        `qualification` integer,
+        `qualification` varchar(255),
         `sector` varchar(255),
         `skills` varchar(255),
         primary key (`id`)
@@ -106,7 +116,7 @@
         `link` varchar(255),
         `money_amount` double precision,
         `money_currency` varchar(255),
-        `round` varchar(255),
+        `round` integer,
         `ticker` varchar(255),
         `title` varchar(255),
         `entrepreneur_id` integer not null,
@@ -160,7 +170,7 @@
     create table `technology_records` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
+        `activity_sector` integer,
         `description` varchar(255),
         `email` varchar(255),
         `indication` varchar(255),
@@ -174,7 +184,7 @@
     create table `tool_records` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
+        `activity_sector` integer,
         `description` varchar(255),
         `email` varchar(255),
         `indication` varchar(255),

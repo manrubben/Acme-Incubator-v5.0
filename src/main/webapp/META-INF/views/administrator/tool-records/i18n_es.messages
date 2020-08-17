@@ -25,3 +25,12 @@ administrator.tool-records.form.button.create = Crear
 administrator.tool-records.form.button.update = Actualizar
 administrator.tool-records.form.button.delete = Eliminar
 administrator.tool-records.button.return = Volver 
+
+administrator.tool-records.form.label.activitySector.technology = Technology
+administrator.tool-records.form.label.activitySector.science = Science
+administrator.tool-records.form.label.activitySector.arts = Arts
+administrator.tool-records.form.label.activitySector.business = Business
+administrator.tool-records.form.label.activitySector.health = Health
+
+administrator.tool-records.form.label.indication.open-source = Open source
+administrator.tool-records.form.label.indication.closed-source = Closed source

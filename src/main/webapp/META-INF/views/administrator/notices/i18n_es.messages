@@ -19,6 +19,8 @@ administrator.notices.form.label.body = Cuerpo:
 administrator.notices.form.label.links = Links:
 administrator.notices.form.button.create = Crear
 administrator.notices.form.label.accept = Aceptar
+
 administrator.notices.error.must-accept = Debe ser aceptado
+administrator.notices.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
 
 administrator.notices.button.return = Volver 

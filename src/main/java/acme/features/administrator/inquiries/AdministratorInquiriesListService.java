@@ -42,7 +42,7 @@ public class AdministratorInquiriesListService implements AbstractListService<Ad
 
 		Collection<Inquiries> result;
 
-		result = this.repository.findManyAll();
+		result = this.repository.findManyAllActives();
 
 		return result;
 	}

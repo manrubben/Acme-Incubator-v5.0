@@ -17,5 +17,8 @@ public interface AuthenticatedInquiriesRepository extends AbstractRepository {
 
 	@Query("select n from Inquiries n")
 	Collection<Inquiries> findManyAll();
+	
+	@Query("select i from Inquiries i where (i.deadline >= CURRENT_TIMESTAMP)")
+	Collection<Inquiries> findManyAllActives();
 
 }

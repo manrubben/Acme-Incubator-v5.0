@@ -18,8 +18,21 @@
 <acme:form>
 	<acme:form-textbox readonly="true" code="entrepreneur.application.form.label.ticker" path="ticker" />
 	<acme:form-moment readonly="true" code="entrepreneur.application.form.label.creation" path="creation" />
+	<jstl:if test="${status == 'PENDING'}">
+	<acme:form-select code="entrepreneur.application.form.label.status" path="status">
+	<acme:form-option code="entrepreneur.application.form.label.status.pending" selected="${pend}" value="PENDING"/>
+	<acme:form-option code="entrepreneur.application.form.label.status.accept" selected="${accept}" value="ACCEPTED"/>
+	<acme:form-option code="entrepreneur.application.form.label.status.reject" selected="${reject}" value="REJECTED"/>
+	</acme:form-select>
+	</jstl:if>
 	<acme:form-textarea readonly="true" code="entrepreneur.application.form.label.statement" path="statement" />
 	<acme:form-money readonly="true" code="entrepreneur.application.form.label.money" path="money" />
+	<jstl:if test="${status == 'PENDING'}">
+	<acme:form-textarea code="entrepreneur.application.form.label.justification"  path="justification"/>
+	</jstl:if>
+	<jstl:if test="${status == 'PENDING'}">
+	<acme:form-submit code="entrepreneur.application.form.button.update"  action="/entrepreneur/application/update?id=${id}"/>
+	</jstl:if>
 	
 	<acme:form-return code="entrepreneur.application.form.button.return" />
 </acme:form>

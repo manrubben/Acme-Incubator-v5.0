@@ -19,6 +19,8 @@ administrator.notices.form.label.body = Body:
 administrator.notices.form.label.links = Links:
 administrator.notices.form.button.create = Create
 administrator.notices.form.label.accept = Accept
+
 administrator.notices.error.must-accept = Must be accepted
+administrator.notices.error.deadlineIsAfter = Deadline must be after the current date
 
 administrator.notices.button.return = Return 

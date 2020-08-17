@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -40,6 +41,7 @@ public class ToolRecords extends DomainEntity {
 	@Length(max = 255)
 	private String				description;
 
+	@URL
 	@NotBlank
 	@Length(max = 255)
 	private String				website;
@@ -49,9 +51,8 @@ public class ToolRecords extends DomainEntity {
 	@Length(max = 255)
 	private String				email;
 
-	@NotBlank
-	@Length(max = 255)
-	private String				indication;
+	@NotNull
+	private Indication			indication;
 
 	@Min(value = -5)
 	@Max(value = 5)

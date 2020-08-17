@@ -26,10 +26,10 @@ public class Entrepreneur extends UserRole {
 	@NotBlank
 	private String				sector;
 
-	@NotNull
+	@NotBlank
 	private String				qualification;
 
-	@NotNull
+	@NotBlank
 	private String				skills;
 
 	// Derived attributes -----------------------------------------------------

@@ -33,13 +33,13 @@
 	<bean id="technologyRecord01"
 		class="acme.entities.TechnologyRecords">
 		<property name="title" value="Sample Technology Record" />
-		<property name="activitySector" value="Arts" />
+		<property name="activitySector" value="Science" />
 		<property name="inventorsName" value="Peter" />
 		<property name="description"
 			value="This is a sample description" />
 		<property name="website" value="http://www.peter.com" />
 		<property name="email" value="peter@gmail.com" />
-		<property name="indication" value="open-source" />
+		<property name="indication" value="open_source" />
 		<property name="stars" value="5" />
 	</bean>
 
@@ -47,13 +47,13 @@
 
 	<bean id="toolRecord01" class="acme.entities.ToolRecords">
 		<property name="title" value="Sample Tool Record" />
-		<property name="activitySector" value="Science" />
+		<property name="activitySector" value="Arts" />
 		<property name="inventorsName" value="Henry" />
 		<property name="description"
 			value="This is a sample description" />
 		<property name="website" value="http://www.henry.com" />
 		<property name="email" value="henry@gmail.com" />
-		<property name="indication" value="closed-source" />
+		<property name="indication" value="closed_source" />
 		<property name="stars" value="4" />
 	</bean>
 	
@@ -64,7 +64,7 @@
 		<property name="description" value="This is a sample description" />
 		<property name="website" value="http://www.mark.com" />
 		<property name="email" value="mark@gmail.com"/>
-		<property name="indication" value="closed-source"/>
+		<property name="indication" value="closed_source"/>
 		<property name="stars" value="5"/>
 	</bean>
 
@@ -105,6 +105,16 @@
 		<property name="title" value="Inquirie 1" />
 		<property name="creation" value="13-07-2020 18:53" />
 		<property name="deadline" value="01-08-2020 12:00" />
+		<property name="paragraph" value="This is a sample paragraph" />
+		<property name="moneyMin" value="€35,000.00" />
+		<property name="moneyMax" value="€45,000.00" />
+		<property name="email" value="josema@gmail.com" />
+	</bean>
+	
+	<bean id="inquirie02" class="acme.entities.Inquiries">
+		<property name="title" value="Inquirie 2" />
+		<property name="creation" value="13-07-2020 18:53" />
+		<property name="deadline" value="21-10-2021 12:00" />
 		<property name="paragraph" value="This is a sample paragraph" />
 		<property name="moneyMin" value="€35,000.00" />
 		<property name="moneyMax" value="€45,000.00" />
@@ -250,8 +260,10 @@
 	<bean name="application01" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-123456" />
 		<property name="creation" value="20-07-2020 20:11" />
+		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
+		<property name="justification" value="" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
@@ -259,8 +271,10 @@
 	<bean name="application02" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-999999" />
 		<property name="creation" value="20-05-2020 20:11" />
+		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a sample statement" />
 		<property name="money" value="00030000.00 EUR" />
+		<property name="justification" value="" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
