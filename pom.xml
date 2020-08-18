@@ -18,12 +18,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>acme</groupId>
-	<artifactId>starter-project</artifactId>
+	<artifactId>acme-incubator</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>Starter-Project</name>
-	<description>This is the Starter Project for the students of Design &amp; Testing.</description>
+	<name>Acme-Incubator</name>
+	<description>This is Acme-Incubator for the students of Design &amp; Testing.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
