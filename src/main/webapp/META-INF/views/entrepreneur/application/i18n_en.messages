@@ -10,7 +10,7 @@
 
 entrepreneur.application.form.label.ticker = Ticker:
 entrepreneur.application.form.label.creation = Creation:
-entrepreneur.application.form.label.status: = Status:
+entrepreneur.application.form.label.status = Status:
 entrepreneur.application.form.label.status.pending = PENDING
 entrepreneur.application.form.label.status.accept = ACCEPT
 entrepreneur.application.form.label.status.reject = REJECT
@@ -20,6 +20,9 @@ entrepreneur.application.form.label.justification = Justification:
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creation
+entrepreneur.application.list.label.status = Status
+
+entrepreneur.application.update.no-empty = You must give a justification if you reject the application
 
 entrepreneur.application.form.button.update = Update
 

@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 entrepreneur.application.form.label.ticker = Ticker:
-entrepreneurr.application.form.label.creation = Creación:
+entrepreneur.application.form.label.creation = Creación:
 entrepreneur.application.form.label.status = Estado:
 entrepreneur.application.form.label.status.pending = PENDIENTE
 entrepreneur.application.form.label.status.accept = ACEPTAR
@@ -20,6 +20,9 @@ entrepreneur.application.form.label.justification = Justificación:
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creación
+entrepreneur.application.list.label.status = Estado
+
+entrepreneur.application.update.no-empty = Debes dar una justificación si rechazas la aplicación
 
 entrepreneur.application.form.button.update = Actualizar
 

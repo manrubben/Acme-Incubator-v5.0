@@ -89,13 +89,6 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 		assert request != null;
 		assert entity != null;
 
-		if (entity.getStatus().equals(ApplicationStatus.ACCEPTED)) {
-			entity.setStatus(ApplicationStatus.ACCEPTED);
-		} else if (entity.getStatus().equals(ApplicationStatus.REJECTED)) {
-			entity.setStatus(ApplicationStatus.REJECTED);
-		} else if (entity.getStatus().equals(ApplicationStatus.PENDING)) {
-			entity.setStatus(ApplicationStatus.PENDING);
-		}
 		this.repository.save(entity);
 
 	}
