@@ -10,12 +10,3 @@ authenticated.technology-records.form.label.stars = Estrellas:
 authenticated.technology-records.form.button.return = Volver
 
 authenticated.technology-records.list.label.activitySector = Sector de actividad
-
-authenticated.technology-records.form.label.activitySector.technology = Tecnología
-authenticated.technology-records.form.label.activitySector.science = Ciencia
-authenticated.technology-records.form.label.activitySector.arts = Artes
-authenticated.technology-records.form.label.activitySector.business = Negocios
-authenticated.technology-records.form.label.activitySector.health = Salud
-
-authenticated.technology-records.form.label.indication.open-source = Fuente abierta
-authenticated.technology-records.form.label.indication.closed-source = Fuente cerrada
