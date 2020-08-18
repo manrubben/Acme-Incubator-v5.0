@@ -1,6 +1,8 @@
 
 package acme.features.administrator.challenges;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -109,6 +111,13 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			errors.state(request, orderReward, "rookieReward", "administrator.challenges.error.rookieReward");
 			errors.state(request, orderReward, "averageReward", "administrator.challenges.error.averageReward");
 
+		}
+
+		boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+		if (!isAfter) {
+			if (!errors.hasErrors("deadline")) {
+				errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
+			}
 		}
 
 	}
