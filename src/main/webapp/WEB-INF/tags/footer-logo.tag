@@ -20,6 +20,6 @@
 <%@attribute name="logo" required="true" type="java.lang.String"%>
 							
 <div class="col align-middle">
-	<img src="images/logo.png" alt="Acme Jobs, Inc." class="img-fluid"/>
+	<img src="images/logo.png" alt="Acme Incubator, Inc." class="img-fluid-logo"/>
 	<jsp:doBody/>							
 </div>
