@@ -83,6 +83,10 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 
 	@Override
 	public void create(final Request<Application> request, final Application entity) {
+		assert request != null;
+		assert entity != null;
+
 		this.repository.save(entity);
+
 	}
 }
