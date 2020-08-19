@@ -65,7 +65,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #fff;
 }
 
@@ -479,8 +479,19 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+}
+
+.img-fluid-logo {
+	max-width:100%;
+	height:auto
+}
+
+.img-fluid-logo {
+	max-width:100%;
+	height:auto;
+	margin-top:-25px;
 }
 
 .img-thumbnail {
