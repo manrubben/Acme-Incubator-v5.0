@@ -32,7 +32,7 @@ public class Application extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$")
+	@Pattern(regexp = "^[A-Z]{3}[-][0-9]{2}[-][0-9]{6}$", message = "{investor.application.error.ticker-pattern}")
 	private String				ticker;
 
 	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")

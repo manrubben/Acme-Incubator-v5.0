@@ -8,9 +8,8 @@ import java.util.stream.Collectors;
 import javax.persistence.Entity;
 import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
-import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
 import acme.framework.entities.DomainEntity;
@@ -30,8 +29,7 @@ public class Configuration extends DomainEntity {
 
 	// Atributes
 
-	@NotNull
-	@Length(max = 255)
+	@NotBlank
 	private String				spamWords;
 
 	@Range(min = 0, max = 1)

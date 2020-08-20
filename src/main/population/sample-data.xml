@@ -252,6 +252,7 @@
 		<property name="description" value="Hello!" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
@@ -260,10 +261,9 @@
 	<bean name="application01" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-123456" />
 		<property name="creation" value="20-07-2020 20:11" />
-		<property name="status" value="PENDING" />
+		<property name="status" value="ACCEPTED" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
-		<property name="justification" value="" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>
@@ -274,7 +274,6 @@
 		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a sample statement" />
 		<property name="money" value="00030000.00 EUR" />
-		<property name="justification" value="" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>

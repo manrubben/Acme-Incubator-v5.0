@@ -21,18 +21,41 @@
 	<jstl:if test="${command != 'create'}">
 		<acme:form-moment code="entrepreneur.investmentRound.form.label.creation" path="creation" readonly="true"/>
 	</jstl:if>
-	<acme:form-textbox code="entrepreneur.investmentRound.form.label.round" path="round" />
+	
+	<acme:form-select  code="entrepreneur.investmentRound.form.label.round" path="round">
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seed" value="SEED"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.angel" value="ANGEL"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesA" value="SERIES_A"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesB" value="SERIES_B"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesC" value="SERIES_C"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.bridge" value="BRIDGE"/>
+	</acme:form-select>
+	
 	<acme:form-textbox code="entrepreneur.investmentRound.form.label.title" path="title" />
 	<acme:form-textarea code="entrepreneur.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="entrepreneur.investmentRound.form.label.money" path="money" />
 	<acme:form-url code="entrepreneur.investmentRound.form.label.link" path="link" />
+	
+	<acme:form-select code="entrepreneur.investmentRound.form.label.finalMode" path="finalMode">
+			<acme:form-option code="entrepreneur.investmentRound.form.label.finalMode.yes" value="true"/>
+			<jstl:choose>
+				<jstl:when test="${!finalMode}">
+					<acme:form-option code="entrepreneur.investmentRound.form.label.finalMode.no" selected = "true" value="false"/>
+				</jstl:when>
+				<jstl:otherwise>
+					<acme:form-option code="entrepreneur.investmentRound.form.label.finalMode.no" value="false"/>
+				</jstl:otherwise>
+			</jstl:choose>
+	</acme:form-select>
 
 	<acme:form-submit test="${command == 'show'}" code="entrepreneur.application.button.list" method="get" 
 		action="/entrepreneur/application/list-investment-rounds-app?id=${id}"/>
-		
+	
+	<jstl:if test="${!finalMode}">	
 	<acme:form-submit test="${command == 'show'}" 
 		code="entrepreneur.investment-round.form.button.update"
 		action="/entrepreneur/investment-round/update" />
+	</jstl:if>		
 	<acme:form-submit test="${command == 'show'}" 
 		code="entrepreneur.investment-round.form.button.delete"
 		action="/entrepreneur/investment-round/delete" />

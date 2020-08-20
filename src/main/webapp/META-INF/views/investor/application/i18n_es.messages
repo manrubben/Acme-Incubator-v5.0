@@ -12,3 +12,4 @@ investor.application.list.label.ticker = Ticker
 investor.application.list.label.creation = Creación
 investor.application.list.label.status = Estado
 
+investor.application.error.ticker-pattern = El ticker debe cumplir con el siguiente patrón: XXX-12-123456

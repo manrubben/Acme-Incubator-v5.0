@@ -26,7 +26,10 @@
 	<acme:form-textarea readonly="true" code="entrepreneur.application.form.label.statement" path="statement" />
 	<acme:form-money readonly="true" code="entrepreneur.application.form.label.money" path="money" />
 	<acme:form-textarea code="entrepreneur.application.form.label.justification"  path="justification"/>
-	<acme:form-submit code="entrepreneur.application.form.button.update"  action="/entrepreneur/application/update?id=${id}"/>
+	
+	<jstl:if test="${pend}">
+	<acme:form-submit code="entrepreneur.application.form.button.update" action="/entrepreneur/application/update?id=${id}"/>
+	</jstl:if>
 	
 	<acme:form-return code="entrepreneur.application.form.button.return" />
 </acme:form>

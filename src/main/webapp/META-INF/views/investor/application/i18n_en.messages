@@ -11,3 +11,5 @@ investor.application.form.button.return = Return
 investor.application.list.label.ticker = Ticker
 investor.application.list.label.creation = Creation
 investor.application.list.label.status = Status
+
+investor.application.error.ticker-pattern = Ticker must adhere to the following pattern: XXX-12-123456
