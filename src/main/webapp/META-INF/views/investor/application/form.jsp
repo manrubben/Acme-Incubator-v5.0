@@ -18,7 +18,7 @@
 <acme:form>
 
     
-	<acme:form-textbox code="investor.application.form.label.ticker" path="ticker"/>
+	<acme:form-textbox code="investor.application.form.label.ticker" path="ticker" placeholder="XXX-12-123456"/>
 	
 	 <jstl:if test="${command !='create'}">
 	<acme:form-moment code="investor.application.form.label.creation" path="creation" readonly="true"/>

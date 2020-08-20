@@ -44,9 +44,9 @@
 			</jstl:choose>
 		</acme:form-select>
 		
-	
+	<jstl:if test="${isNotApped }">
 	<acme:form-submit code="investor.app.investmenRound.button" method="get"  action="/investor/application/create?InvestmentRoundId=${id}"/>
-	
+	</jstl:if>
 		
 	
 	<acme:form-return code="investor.application.form.button.return" />
