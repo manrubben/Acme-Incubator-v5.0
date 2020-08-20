@@ -10,3 +10,7 @@ investor.application.list.label.creation = Fecha de creación
 investor.application.list.label.statement = Declaración
 investor.application.list.label.money = Dinero
 
+investor.application.form.button.create = Crear
+
+investor.application.error.ticker-pattern = El ticker debe cumplir con el siguiente patrón: XXX-12-123456
+
