@@ -31,4 +31,11 @@ entrepreneur.investment-round.error.ticker-pattern = Ticker must adhere to the f
 entrepreneur.investment-round.error.money = Money must be set in euros
 entrepreneur.investment-round.error.round = Round must be: SEED, ANGEL, SERIES-A, SERIES-B, SERIES-C, or BRIDGE
 
+entrepreneur.investmentRound.form.label.round.seed = SEED
+entrepreneur.investmentRound.form.label.round.angel = ANGEL
+entrepreneur.investmentRound.form.label.round.seriesA = SERIES-A
+entrepreneur.investmentRound.form.label.round.seriesB = SERIES-B
+entrepreneur.investmentRound.form.label.round.seriesC = SERIES-C
+entrepreneur.investmentRound.form.label.round.bridge = BRIDGE
+
 entrepreneur.application.form.button.return = Return

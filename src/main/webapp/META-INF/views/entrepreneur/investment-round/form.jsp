@@ -21,7 +21,16 @@
 	<jstl:if test="${command != 'create'}">
 		<acme:form-moment code="entrepreneur.investmentRound.form.label.creation" path="creation" readonly="true"/>
 	</jstl:if>
-	<acme:form-textbox code="entrepreneur.investmentRound.form.label.round" path="round" />
+	
+	<acme:form-select  code="entrepreneur.investmentRound.form.label.round" path="round">
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seed" value="SEED"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.angel" value="ANGEL"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesA" value="SERIES_A"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesB" value="SERIES_B"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.seriesC" value="SERIES_C"/>
+		<acme:form-option code="entrepreneur.investmentRound.form.label.round.bridge" value="BRIDGE"/>
+	</acme:form-select>
+	
 	<acme:form-textbox code="entrepreneur.investmentRound.form.label.title" path="title" />
 	<acme:form-textarea code="entrepreneur.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="entrepreneur.investmentRound.form.label.money" path="money" />
