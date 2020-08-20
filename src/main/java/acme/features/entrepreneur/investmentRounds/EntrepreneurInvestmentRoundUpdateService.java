@@ -25,7 +25,14 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+
+		int investRoundId = request.getModel().getInteger("id");
+		InvestmentRound investRound = this.repository.findOneById(investRoundId);
+
+		result = !investRound.getFinalMode();
+
+		return result;
 	}
 
 	@Override
@@ -43,7 +50,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "link");
+		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "link", "finalMode");
 	}
 
 	@Override
@@ -86,6 +93,26 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		if (!errors.hasErrors("money")) {
 			Boolean isEur = entity.getMoney().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "money", "entrepreneur.investment-round.error.money");
+		}
+
+		if (!errors.hasErrors()) {
+			if (entity.getFinalMode()) {
+				int investmentRoundId = entity.getId();
+				Double totalBudget = this.repository.findTotalDedicationByInvestmentRoundId(investmentRoundId);
+
+				if (totalBudget == null) {
+					totalBudget = 0.0;
+				}
+
+				InvestmentRound investmentRound1 = this.repository.findOneById(investmentRoundId);
+
+				Double dinero = investmentRound1.getMoney().getAmount();
+
+				boolean sumaCorrecta = totalBudget == dinero;
+				errors.state(request, sumaCorrecta, "finalMode", "The money does not match the budget");
+
+				request.getModel().setAttribute("finalMode", sumaCorrecta);
+			}
 		}
 
 	}

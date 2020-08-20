@@ -1,0 +1,16 @@
+###### List ######
+
+authenticated.investor.form.title.create = Ser inversor
+authenticated.investor.form.title.update = Actualizar información de inversor
+
+###### Form ######
+
+authenticated.investor.form.label.firmName = Nombre de la firma
+authenticated.investor.form.label.sector = sector
+authenticated.investor.form.label.profile = Perfil
+
+###### Button ######
+
+authenticated.investor.form.button.create = Crear
+authenticated.investor.form.button.update = Actualizar
+authenticated.investor.form.button.return = Volver 
