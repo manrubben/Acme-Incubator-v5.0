@@ -84,6 +84,16 @@ public class AdministratorInquiriesUpdateService implements AbstractUpdateServic
 			boolean isSpam = config.isSpam(entity.getEmail());
 			errors.state(request, !isSpam, "email", "administrator.inquiries.error.spam");
 		}
+		
+		if (!errors.hasErrors("moneyMin")) {
+			Boolean isEur = entity.getMoneyMin().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
+		}
+
+		if (!errors.hasErrors("moneyMax")) {
+			Boolean isEur = entity.getMoneyMax().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
+		}
 
 	}
 

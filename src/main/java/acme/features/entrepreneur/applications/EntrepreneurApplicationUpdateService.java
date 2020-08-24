@@ -82,6 +82,11 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 				errors.state(request, !isEmpty, "justification", "entrepreneur.application.update.no-empty");
 			}
 		}
+		
+		if (!errors.hasErrors("money")) {
+			Boolean isEur = entity.getMoney().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+			errors.state(request, isEur, "money", "investor.application.error.money");
+		}
 	}
 
 	@Override
