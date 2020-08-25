@@ -26,6 +26,8 @@ entrepreneur.application.button.list = List applications
 entrepreneur.investment-round.form.button.create = Create
 entrepreneur.investment-round.form.button.update = Update
 entrepreneur.investment-round.form.button.delete = Delete
+entrepreneur.investmentRound.form.button.createAct = Create activity
+entrepreneur.investmentRound.form.button.listAct = List activities
 
 entrepreneur.investment-round.error.ticker-pattern = Ticker must adhere to the following pattern: XXX-12-123456
 entrepreneur.investment-round.error.money = Money must be set in euros

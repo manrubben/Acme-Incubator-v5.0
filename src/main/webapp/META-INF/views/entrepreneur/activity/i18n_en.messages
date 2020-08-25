@@ -1,0 +1,17 @@
+
+entrepreneur.activity.form.label.title = Title:
+entrepreneur.activity.form.label.start = Start:
+entrepreneur.activity.form.label.end = End:
+entrepreneur.activity.form.label.budget = Budget: 
+
+entrepreneur.activity.list.label.title = Title
+entrepreneur.activity.list.label.budget = Budget
+
+employer.duty.error.job-not-mine = Can't create duties for other employers jobs
+employer.duty.error.is-final = Can't delete a duty if job is in finalMode
+
+entrepreneur.activity.form.button.update = Update
+entrepreneur.activity.form.button.delete = Delete
+entrepreneur.activity.form.button.create = Create
+entrepreneur.activity.form.button.return = Return 
+
