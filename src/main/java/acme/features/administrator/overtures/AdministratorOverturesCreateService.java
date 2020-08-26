@@ -99,6 +99,10 @@ public class AdministratorOverturesCreateService implements AbstractCreateServic
 			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
 			errors.state(request, isAfter, "deadline", "administrator.overtures.error.deadlineIsAfter");
 		}
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.notices.error.deadlineIsAfter");
+		}
 
 	}
 

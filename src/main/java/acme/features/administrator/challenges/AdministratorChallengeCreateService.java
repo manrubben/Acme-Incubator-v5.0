@@ -112,7 +112,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		if (!errors.hasErrors("deadline")) {
 			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
 			errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
-		}
+    }
 
 	}
 

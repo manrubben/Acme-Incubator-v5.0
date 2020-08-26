@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.inquiries.form.label.title = Títitulo:
+authenticated.inquiries.form.label.title = Título:
 authenticated.inquiries.form.label.creation = Creación:
 authenticated.inquiries.form.label.deadline = Fecha límite:
 

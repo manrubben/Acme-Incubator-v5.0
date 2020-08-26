@@ -94,6 +94,10 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 			Boolean isEur = entity.getMoneyMax().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
 		}
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.notices.error.deadlineIsAfter");
+		}
 
 		if (!errors.hasErrors("deadline")) {
 			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
