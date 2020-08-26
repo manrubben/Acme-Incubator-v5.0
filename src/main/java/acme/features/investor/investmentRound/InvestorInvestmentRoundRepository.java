@@ -2,7 +2,6 @@
 package acme.features.investor.investmentRound;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -18,7 +17,7 @@ public interface InvestorInvestmentRoundRepository extends AbstractRepository {
 	InvestmentRound findOneById(int id);
 
 	@Query("select i from InvestmentRound i where i.finalMode = true")
-	Collection<InvestmentRound> findManyAllPublish(Date d);
+	Collection<InvestmentRound> findManyAllActive();
 
 	@Query("select a from Application a where a.investmentRound.id=?1 AND a.investor.id=?2")
 	Collection<Application> exists(int idInvestment, int idInvestor);

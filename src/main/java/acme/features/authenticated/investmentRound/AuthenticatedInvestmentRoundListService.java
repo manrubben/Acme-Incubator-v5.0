@@ -18,6 +18,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 	@Autowired
 	private AuthenticatedInvestmentRoundRepository repository;
 
+
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
@@ -39,7 +40,7 @@ public class AuthenticatedInvestmentRoundListService implements AbstractListServ
 	public Collection<InvestmentRound> findMany(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		Collection<InvestmentRound> result = this.repository.findManyAll();
+		Collection<InvestmentRound> result = this.repository.findManyAllActive();
 
 		return result;
 	}

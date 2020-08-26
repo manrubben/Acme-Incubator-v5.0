@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.inquiries;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,16 @@ public class AuthenticatedInquiriesShowService implements AbstractShowService<Au
 	public boolean authorise(final Request<Inquiries> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		int inquirieId;
+		Inquiries currentInquirie;
+
+		inquirieId = request.getModel().getInteger("id");
+		currentInquirie = this.repository.findOneById(inquirieId);
+
+		result = currentInquirie.getDeadline().isAfter(LocalDateTime.now());
+
+		return result;
 	}
 
 	@Override
@@ -30,7 +41,7 @@ public class AuthenticatedInquiriesShowService implements AbstractShowService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "moneyMin","moneyMax","email");
+		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "moneyMin", "moneyMax", "email");
 	}
 
 	@Override

@@ -26,10 +26,14 @@ entrepreneur.application.button.list = List applications
 entrepreneur.investment-round.form.button.create = Create
 entrepreneur.investment-round.form.button.update = Update
 entrepreneur.investment-round.form.button.delete = Delete
+entrepreneur.investmentRound.form.button.createAct = Create activity
+entrepreneur.investmentRound.form.button.listAct = List activities
 
 entrepreneur.investment-round.error.ticker-pattern = Ticker must adhere to the following pattern: XXX-12-123456
 entrepreneur.investment-round.error.money = Money must be set in euros
 entrepreneur.investment-round.error.round = Round must be: SEED, ANGEL, SERIES-A, SERIES-B, SERIES-C, or BRIDGE
+entrepreneur.investment-round.error.finalMode = The money does not match the total budget of the activities
+entrepreneur.investment-round.error.delete = You can not delete an investment round with applications
 
 entrepreneur.investmentRound.form.label.round.seed = SEED
 entrepreneur.investmentRound.form.label.round.angel = ANGEL

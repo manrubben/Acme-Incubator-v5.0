@@ -25,6 +25,7 @@ administrator.inquiries.form.button.delete = Delete
 
 
 administrator.inquiries.error.must-be-eur = Money must be set in euros
+administrator.inquiries.error.deadlineIsAfter = Deadline must be after the current date
 
 
 administrator.inquiries.form.button.return = Return 

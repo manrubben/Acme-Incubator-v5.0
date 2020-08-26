@@ -34,7 +34,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "creation");
+		request.bind(entity, errors, "creation", "finalMode");
 
 	}
 
@@ -65,6 +65,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 
 		result.setEntrepreneur(currentEntrepreneur);
 		result.setCreation(creation);
+		result.setFinalMode(false);
 		return result;
 	}
 

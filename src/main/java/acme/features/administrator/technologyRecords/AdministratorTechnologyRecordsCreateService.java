@@ -90,8 +90,8 @@ public class AdministratorTechnologyRecordsCreateService implements AbstractCrea
 		}
 
 		if (!errors.hasErrors("indication")) {
-			boolean isSpam = config.isSpam(entity.getIndication());
-			errors.state(request, !isSpam, "indication", "administrator.technology-records.error.spam");
+			boolean isSpam = config.isSpam(entity.getIndication().toString());
+			errors.state(request, !isSpam, "indication", "administrator.tool-records.error.spam");
 		}
 
 	}

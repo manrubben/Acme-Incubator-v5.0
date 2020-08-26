@@ -27,6 +27,7 @@ public class Notices extends DomainEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	@NotBlank
 	@URL
 	private String				headerPicture;
 
