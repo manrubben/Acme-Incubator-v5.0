@@ -1,39 +1,37 @@
 
-package acme.features.entrepreneur.activities;
+package acme.features.authenticated.activities;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Activity;
-import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EntrepreneurActivityShowService implements AbstractShowService<Entrepreneur, Activity> {
+public class AuthenticatedActivityShowService implements AbstractShowService<Authenticated, Activity> {
 
 	@Autowired
-	private EntrepreneurActivityRepository repository;
+	private AuthenticatedActivityRepository repository;
 
 
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
-		boolean result;
 
+		boolean result = false;
 		int activityId;
-		Activity activity;
-		Entrepreneur entrepreneur;
+		Activity currentActivity;
 		Principal principal;
 
 		activityId = request.getModel().getInteger("id");
-		activity = this.repository.findOneById(activityId);
-
-		entrepreneur = activity.getInvestmentRound().getEntrepreneur();
+		currentActivity = this.repository.findOneById(activityId);
 		principal = request.getPrincipal();
-		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+
+		result = currentActivity.getInvestmentRound().getFinalMode() == true || currentActivity.getInvestmentRound().getFinalMode() == false && currentActivity.getInvestmentRound().getEntrepreneur().getUserAccount().getId() == principal.getAccountId();
 
 		return result;
 	}
@@ -44,9 +42,6 @@ public class EntrepreneurActivityShowService implements AbstractShowService<Entr
 		assert entity != null;
 		assert model != null;
 
-		model.setAttribute("investmentRoundFinal", entity.getInvestmentRound().getFinalMode());
-
-		//request.unbind(entity, model, "title", "start", "end", "budget", "investmentRound.finalMode", "investmentRound.tittle");
 		request.unbind(entity, model, "title", "start", "end", "budget");
 	}
 
@@ -55,10 +50,10 @@ public class EntrepreneurActivityShowService implements AbstractShowService<Entr
 		assert request != null;
 
 		Activity result;
-		int id;
+		int idInvestmentRound;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		idInvestmentRound = request.getModel().getInteger("id");
+		result = this.repository.findOneById(idInvestmentRound);
 
 		return result;
 	}

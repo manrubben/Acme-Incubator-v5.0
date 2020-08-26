@@ -27,6 +27,18 @@
 			<null />
 		</property>
 	</bean>
+	
+	<bean id="notice02" class="acme.entities.Notices">
+		<property name="headerPicture"
+			value="https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2020/07/10/Recortada/img_dsempere_20200630-151946_imagenes_lv_otras_fuentes_covid-rebrotes2-143-U442461271936j6E-U482204711624jJF-992x558@LaVanguardia-Web-Portada.jpg" />
+		<property name="title" value="Coronavirus. Nuevos rebrotes2" />
+		<property name="creation" value="10-07-2020 16:13" />
+		<property name="deadline" value="25-08-2020 16:13" />
+		<property name="body" value="This is a sample notice" />
+		<property name="links">
+			<null />
+		</property>
+	</bean>
 
 	<!-- Technology Records -->
 
@@ -180,6 +192,37 @@
 		<property name="userAccount" ref="entrepreneur1UserAccount" />
 	</bean>
 	
+	<bean name="entrepreneur2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="entrepreneur2" />
+		<property name="password" value="entrepreneur2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Entrepreneur" />
+				<property name="surname" value="Two" />
+				<property name="email" value="entrepreneur2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="entrepreneur2Entrepreneur" />
+				<ref bean="entrepreneur2Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="entrepreneur2Entrepreneur" class="acme.entities.roles.Entrepreneur">
+		<property name="name" value="Entrepreneur 2, Inc." />
+		<property name="sector" value="Sector 2" />
+		<property name="qualification" value="5" />
+		<property name="skills" value="Intelligent" />
+		<property name="userAccount" ref="entrepreneur2UserAccount" />
+	</bean>
+
+	<bean name="entrepreneur2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="entrepreneur2UserAccount" />
+	</bean>
+	
 	<!-- Investors -->
 	
 	<bean name="investor1UserAccount" class="acme.framework.entities.UserAccount">
@@ -251,6 +294,42 @@
 		<property name="title" value="Investment Round 1" />
 		<property name="description" value="Hello!" />
 		<property name="money" value="00040000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound02" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000001" />
+		<property name="creation" value="20-06-2020 20:12" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 2" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00060000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="false" />
+		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound03" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000003" />
+		<property name="creation" value="20-08-2020 20:11" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 3" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00070000.00 EUR" />
+		<property name="link" value="http://www.example.com" />
+		<property name="finalMode" value="true" />
+		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
+	</bean>
+	
+	<bean id="investmentRound04" class="acme.entities.InvestmentRound">
+		<property name="ticker" value="SEC-20-000004" />
+		<property name="creation" value="20-08-2019 20:11" />
+		<property name="round" value="SEED" />
+		<property name="title" value="Investment Round 4" />
+		<property name="description" value="Hello!" />
+		<property name="money" value="00020000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />

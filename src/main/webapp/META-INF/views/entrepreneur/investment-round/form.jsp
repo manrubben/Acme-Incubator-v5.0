@@ -53,8 +53,10 @@
 		action="/entrepreneur/application/list-investment-rounds-app?id=${id}"/>
 	
 	<jstl:if test="${!finalMode}">		
-	<acme:form-submit test="${command != 'create'}"
-	 	code="entrepreneur.investmentRound.form.button.createAct" method="get" action="/entrepreneur/activity/create?investmentRoundId=${id}"/>
+	<!-- <acme:form-submit test="${command != 'create'}"
+	 	code="entrepreneur.investmentRound.form.button.createAct" method="get" action="/entrepreneur/activity/create?investmentRoundId=${id}"/> -->
+	 	<acme:form-submit test="${command == 'show'}" code="entrepreneur.investmentRound.form.button.createAct" method="get" 
+		action="/entrepreneur/activity/create?id=${id}"/>
 	 </jstl:if>		
 	<acme:form-submit test="${command != 'create'}"
 	 	code="entrepreneur.investmentRound.form.button.listAct" method="get" action="/entrepreneur/activity/list-by-investment-rounds?id=${id}"/>

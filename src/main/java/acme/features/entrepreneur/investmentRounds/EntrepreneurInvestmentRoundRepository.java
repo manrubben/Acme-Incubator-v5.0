@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Activity;
 import acme.entities.Configuration;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
@@ -31,5 +32,8 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select sum(d.budget.amount) from Activity d where d.investmentRound.id = ?1")
 	Double findTotalDedicationByInvestmentRoundId(int investmentRoundId);
+
+	@Query("select a from Activity a where a.investmentRound.id = ?1")
+	Collection<Activity> findManyActivitiesByInvestmentRoundId(int investmentRoundId);
 
 }

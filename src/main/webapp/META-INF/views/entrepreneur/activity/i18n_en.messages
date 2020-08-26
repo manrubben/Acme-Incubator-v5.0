@@ -7,9 +7,10 @@ entrepreneur.activity.form.label.budget = Budget:
 entrepreneur.activity.list.label.title = Title
 entrepreneur.activity.list.label.budget = Budget
 
-employer.duty.error.job-not-mine = Can't create duties for other employers jobs
-employer.duty.error.is-final = Can't delete a duty if job is in finalMode
+entrepreneur.activity.error.job-not-mine = Can't update duties for other entrepreneurs investment rounds
+entrepreneur.activity.error.is-final = Can't delete a activity if investment round is in final mode
 
+entrepreneur.activity.form.button.create = Create
 entrepreneur.activity.form.button.update = Update
 entrepreneur.activity.form.button.delete = Delete
 entrepreneur.activity.form.button.create = Create

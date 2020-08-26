@@ -27,10 +27,10 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 
 		boolean result = false;
 
-		int investRoundId = request.getModel().getInteger("id");
-		InvestmentRound investRound = this.repository.findOneById(investRoundId);
+		int investmentRoundId = request.getModel().getInteger("id");
+		InvestmentRound investmentRound = this.repository.findOneById(investmentRoundId);
 
-		result = !investRound.getFinalMode();
+		result = !investmentRound.getFinalMode();
 
 		return result;
 	}
@@ -109,7 +109,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 				Double dinero = investmentRound1.getMoney().getAmount();
 
 				boolean sumaCorrecta = totalBudget == dinero;
-				errors.state(request, sumaCorrecta, "finalMode", "The money does not match the budget");
+				errors.state(request, sumaCorrecta, "finalMode", "entrepreneur.investment-round.error.finalMode");
 
 				request.getModel().setAttribute("finalMode", sumaCorrecta);
 			}

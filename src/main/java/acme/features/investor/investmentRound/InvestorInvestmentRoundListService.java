@@ -2,8 +2,6 @@
 package acme.features.investor.investmentRound;
 
 import java.util.Collection;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,11 +40,8 @@ public class InvestorInvestmentRoundListService implements AbstractListService<I
 		assert request != null;
 
 		Collection<InvestmentRound> result;
-		Date now;
 
-		now = new GregorianCalendar().getTime();
-
-		result = this.repository.findManyAllPublish(now);
+		result = this.repository.findManyAllActive();
 
 		return result;
 	}

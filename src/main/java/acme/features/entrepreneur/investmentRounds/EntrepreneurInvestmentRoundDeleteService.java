@@ -1,9 +1,12 @@
 
 package acme.features.entrepreneur.investmentRounds;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Activity;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
@@ -67,7 +70,7 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 		if (countOfApplications == null) {
 			countOfApplications = 0;
 		}
-		errors.state(request, countOfApplications == 0, "finalMode", "You can not delete an inversion with aplications");
+		errors.state(request, countOfApplications == 0, "finalMode", "entrepreneur.investment-round.error.delete");
 
 	}
 
@@ -75,6 +78,14 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 	public void delete(final Request<InvestmentRound> request, final InvestmentRound entity) {
 		assert request != null;
 		assert entity != null;
+
+		Collection<Activity> activities = this.repository.findManyActivitiesByInvestmentRoundId(entity.getId());
+
+		if (!activities.isEmpty()) {
+			for (Activity activity : activities) {
+				this.repository.delete(activity);
+			}
+		}
 
 		this.repository.delete(entity);
 

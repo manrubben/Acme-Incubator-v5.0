@@ -7,39 +7,44 @@ import org.springframework.stereotype.Service;
 import acme.entities.Activity;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
+import acme.features.entrepreneur.investmentRounds.EntrepreneurInvestmentRoundRepository;
 import acme.framework.components.Errors;
-import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
 public class EntrepreneurActivityCreateService implements AbstractCreateService<Entrepreneur, Activity> {
 
 	@Autowired
-	EntrepreneurActivityRepository repository;
+	EntrepreneurActivityRepository			activityRepository;
+
+	@Autowired
+	EntrepreneurInvestmentRoundRepository	investmentRoundRepository;
 
 
 	@Override
 	public boolean authorise(final Request<Activity> request) {
+		/*
+		 * assert request != null;
+		 *
+		 * boolean res;
+		 * Principal principal;
+		 * Integer investmentRoundId;
+		 * InvestmentRound currentinvestmentRound;
+		 *
+		 * res = false;
+		 * principal = request.getPrincipal();
+		 * investmentRoundId = request.getModel().getInteger("investmentRoundId");
+		 *
+		 * if (investmentRoundId != null) {
+		 * currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
+		 * res = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId() && !currentinvestmentRound.getFinalMode();
+		 * }
+		 */
+
 		assert request != null;
-
-		boolean res;
-		Principal principal;
-		Integer investmentRoundId;
-		InvestmentRound currentinvestmentRound;
-
-		res = false;
-		principal = request.getPrincipal();
-		investmentRoundId = request.getModel().getInteger("investmentRoundId");
-
-		if (investmentRoundId != null) {
-			currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
-			res = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId() && !currentinvestmentRound.getFinalMode();
-		}
-
-		return res;
+		return true;
 	}
 
 	@Override
@@ -57,23 +62,25 @@ public class EntrepreneurActivityCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert model != null;
 
-		int investmentRoundId;
-
 		request.unbind(entity, model, "title", "start", "end", "budget");
-
-		if (request.getMethod() == HttpMethod.GET) {
-
-			investmentRoundId = request.getModel().getInteger("investmentRoundId");
-			model.setAttribute("investmentRoundId", investmentRoundId);
-			request.transfer(model, "investmentRoundId");
-		}
+		model.setAttribute("id", entity.getInvestmentRound().getId());
 
 	}
 
 	@Override
 	public Activity instantiate(final Request<Activity> request) {
-		Activity result;
-		result = new Activity();
+		assert request != null;
+
+		Activity result = new Activity();
+
+		int investmentRoundId;
+
+		investmentRoundId = request.getModel().getInteger("id");
+
+		InvestmentRound investmentRound = this.investmentRoundRepository.findOneById(investmentRoundId);
+
+		assert investmentRound != null;
+		result.setInvestmentRound(investmentRound);
 
 		return result;
 	}
@@ -84,37 +91,35 @@ public class EntrepreneurActivityCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert errors != null;
 
-		Integer investmentRoundId;
-		InvestmentRound currentinvestmentRound;
-		Principal principal;
-		boolean validInvestment;
-
-		principal = request.getPrincipal();
-		investmentRoundId = request.getModel().getInteger("investmentRoundId");
-
-		if (!errors.hasErrors("investmentRound")) {
-			validInvestment = investmentRoundId != null;
-
-			if (validInvestment) {
-				currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
-				validInvestment = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId();
-			}
-			errors.state(request, validInvestment, "investmentRoundId", "entrepreneur.Activity.error.job-not-mine");
-		}
+		/*
+		 * Integer investmentRoundId;
+		 * InvestmentRound currentinvestmentRound;
+		 * Principal principal;
+		 * boolean validInvestment;
+		 *
+		 * principal = request.getPrincipal();
+		 * investmentRoundId = request.getModel().getInteger("investmentRoundId");
+		 *
+		 * if (!errors.hasErrors("investmentRound")) {
+		 * validInvestment = investmentRoundId != null;
+		 *
+		 * if (validInvestment) {
+		 * currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
+		 * validInvestment = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId();
+		 * }
+		 * errors.state(request, validInvestment, "investmentRoundId", "entrepreneur.Activity.error.job-not-mine");
+		 * }
+		 */
 
 	}
 
 	@Override
 	public void create(final Request<Activity> request, final Activity entity) {
 
-		int investmentRoundId;
-		InvestmentRound currentinvestmentRound;
+		assert request != null;
+		assert entity != null;
 
-		investmentRoundId = request.getModel().getInteger("investmentRoundId");
-		currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
-		entity.setInvestmentRound(currentinvestmentRound);
-
-		this.repository.save(entity);
+		this.activityRepository.save(entity);
 	}
 
 }
