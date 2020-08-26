@@ -1,6 +1,8 @@
 
 package acme.features.entrepreneur.activities;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,23 +23,6 @@ public class EntrepreneurActivityUpdateService implements AbstractUpdateService<
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
-
-		/*
-		 * boolean res;
-		 * Principal principal;
-		 * Integer investmentRoundId;
-		 * InvestmentRound currentinvestmentRound;
-		 * 
-		 * res = false;
-		 * principal = request.getPrincipal();
-		 * investmentRoundId = request.getModel().getInteger("investmentRoundId");
-		 * 
-		 * if (investmentRoundId != null) {
-		 * currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
-		 * res = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId() && !currentinvestmentRound.getFinalMode();
-		 * }
-		 */
-
 		return true;
 	}
 
@@ -78,6 +63,21 @@ public class EntrepreneurActivityUpdateService implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("start")) {
+			Boolean isBefore = entity.getStart().isBefore(entity.getEnd());
+			errors.state(request, isBefore, "start", "entrepreneur.activity.error.start");
+		}
+
+		if (!errors.hasErrors("start")) {
+			Boolean isAfterThanToday = entity.getStart().isAfter(LocalDateTime.now());
+			errors.state(request, isAfterThanToday, "start", "entrepreneur.activity.error.isAfterThanToday");
+		}
+
+		if (!errors.hasErrors("budget")) {
+			Boolean isEur = entity.getBudget().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+			errors.state(request, isEur, "budget", "entrepreneur.activity.error.budget");
+		}
 
 	}
 

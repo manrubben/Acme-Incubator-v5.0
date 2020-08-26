@@ -1,3 +1,13 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
 
 entrepreneur.activity.form.label.title = Title:
 entrepreneur.activity.form.label.start = Start:
@@ -9,6 +19,9 @@ entrepreneur.activity.list.label.budget = Budget
 
 entrepreneur.activity.error.job-not-mine = Can't update duties for other entrepreneurs investment rounds
 entrepreneur.activity.error.is-final = Can't delete a activity if investment round is in final mode
+entrepreneur.activity.error.start = Start must be before end
+entrepreneur.activity.error.budget = Only euro currency supported
+entrepreneur.activity.error.isAfterThanToday = Start must be after the current date
 
 entrepreneur.activity.form.button.create = Create
 entrepreneur.activity.form.button.update = Update

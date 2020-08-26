@@ -87,7 +87,8 @@
 		<property name="creation" value="17-07-2020 16:13" />
 		<property name="deadline" value="01-12-2022 18:00" />
 		<property name="paragraph" value="This is a sample paragraph" />
-		<property name="rangeMoney" value="€50,000.00" />
+		<property name="moneyMin" value="€35,000.00" />
+		<property name="moneyMax" value="€45,000.00" />
 		<property name="email" value="josema@gmail.com" />
 	</bean>
 
@@ -96,7 +97,8 @@
 		<property name="creation" value="13-07-2020 19:00" />
 		<property name="deadline" value="12-05-2021 20:00" />
 		<property name="paragraph" value="This is a sample paragraph" />
-		<property name="rangeMoney" value="€20,000.00" />
+		<property name="moneyMin" value="€35,000.00" />
+		<property name="moneyMax" value="€45,000.00" />
 		<property name="email" value="josema@gmail.com" />
 	</bean>
 
@@ -105,7 +107,8 @@
 		<property name="creation" value="13-07-2020 18:53" />
 		<property name="deadline" value="01-06-2020 12:00" />
 		<property name="paragraph" value="This is a sample paragraph" />
-		<property name="rangeMoney" value="€35,000.00" />
+		<property name="moneyMin" value="€35,000.00" />
+		<property name="moneyMax" value="€45,000.00" />
 		<property name="email" value="josema@gmail.com" />
 	</bean>
 

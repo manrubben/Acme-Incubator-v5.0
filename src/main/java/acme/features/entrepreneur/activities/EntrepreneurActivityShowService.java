@@ -45,8 +45,6 @@ public class EntrepreneurActivityShowService implements AbstractShowService<Entr
 		assert model != null;
 
 		model.setAttribute("investmentRoundFinal", entity.getInvestmentRound().getFinalMode());
-
-		//request.unbind(entity, model, "title", "start", "end", "budget", "investmentRound.finalMode", "investmentRound.tittle");
 		request.unbind(entity, model, "title", "start", "end", "budget");
 	}
 

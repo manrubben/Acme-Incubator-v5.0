@@ -21,23 +21,6 @@ public class EntrepreneurActivityDeleteService implements AbstractDeleteService<
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
-
-		/*
-		 * boolean res;
-		 * Principal principal;
-		 * Integer investmentRoundId;
-		 * InvestmentRound currentinvestmentRound;
-		 * 
-		 * res = false;
-		 * principal = request.getPrincipal();
-		 * investmentRoundId = request.getModel().getInteger("investmentRoundId");
-		 * 
-		 * if (investmentRoundId != null) {
-		 * currentinvestmentRound = this.repository.findInvestmentRoundById(investmentRoundId);
-		 * res = currentinvestmentRound != null && currentinvestmentRound.getEntrepreneur().getId() == principal.getActiveRoleId() && !currentinvestmentRound.getFinalMode();
-		 * }
-		 */
-
 		return true;
 	}
 
@@ -79,12 +62,9 @@ public class EntrepreneurActivityDeleteService implements AbstractDeleteService<
 		assert entity != null;
 		assert errors != null;
 
-		/*
-		 * if (!errors.hasErrors("investmentRound")) {
-		 * errors.state(request, !entity.getInvestmentRound().getFinalMode(), "title", "entrepreneur.activity.error.final");
-		 * }
-		 */
-
+		if (!errors.hasErrors("investmentRound")) {
+			errors.state(request, !entity.getInvestmentRound().getFinalMode(), "budget", "entrepreneur.activity.error.is-final");
+		}
 	}
 
 	@Override

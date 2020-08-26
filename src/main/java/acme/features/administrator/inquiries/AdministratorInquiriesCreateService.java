@@ -95,6 +95,11 @@ public class AdministratorInquiriesCreateService implements AbstractCreateServic
 			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
 		}
 
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.inquiries.error.deadlineIsAfter");
+		}
+
 	}
 
 	@Override

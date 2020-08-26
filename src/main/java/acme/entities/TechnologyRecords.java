@@ -57,7 +57,7 @@ public class TechnologyRecords extends DomainEntity {
 	private String				email;
 
 	@NotNull
-	private String				indication;
+	private Indication			indication;
 
 	@Min(value = -5)
 	@Max(value = 5)
