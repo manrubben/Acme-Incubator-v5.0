@@ -21,6 +21,8 @@ entrepreneur.activity.error.is-final = No se puede borrar una actividad si la ro
 entrepreneur.activity.error.start = La fecha de inicio debe ser anterior a la fecha final
 entrepreneur.activity.error.budget = Solo se admiten euros
 entrepreneur.activity.error.isAfterThanToday = La fecha de inicio debe ser posterior a la fecha actual
+entrepreneur.activity.error.spam = Spam detectado
+
 
 entrepreneur.activity.form.button.create = Crear
 entrepreneur.activity.form.button.update = Actualizar

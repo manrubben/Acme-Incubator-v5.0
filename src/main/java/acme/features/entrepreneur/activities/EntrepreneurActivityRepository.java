@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Activity;
+import acme.entities.Configuration;
 import acme.entities.InvestmentRound;
 import acme.framework.repositories.AbstractRepository;
 
@@ -21,5 +22,8 @@ public interface EntrepreneurActivityRepository extends AbstractRepository {
 
 	@Query("select i from InvestmentRound i where i.id = ?1")
 	InvestmentRound findInvestmentRoundById(int investmentRoundId);
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }

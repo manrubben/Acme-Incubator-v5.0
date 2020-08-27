@@ -108,8 +108,17 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 
 				Double dinero = investmentRound1.getMoney().getAmount();
 
+				boolean isSpamTitle = config.isSpam(entity.getTitle());
+				boolean isSpamDescription = config.isSpam(entity.getDescription());
+				boolean isSpamLink = config.isSpam(entity.getLink());
+
 				boolean sumaCorrecta = totalBudget == dinero;
-				errors.state(request, sumaCorrecta, "finalMode", "entrepreneur.investment-round.error.finalMode");
+
+				boolean noHaySpam = !isSpamTitle & !isSpamDescription && !isSpamLink;
+
+				errors.state(request, sumaCorrecta, "finalMode", "entrepreneur.investment-round.error.wrongSum");
+
+				errors.state(request, noHaySpam, "finalMode", "entrepreneur.investment-round.error.spam");
 
 				request.getModel().setAttribute("finalMode", sumaCorrecta);
 			}

@@ -24,5 +24,6 @@ administrator.overtures.form.button.delete = Eliminar
 
 administrator.overtures.error.must-be-eur = La moneda debe estar en euros
 administrator.overtures.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
+administrator.overtures.error.spam = Spam detectado
 
 administrator.overtures.form.button.return = Volver

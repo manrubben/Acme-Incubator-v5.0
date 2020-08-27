@@ -85,6 +85,8 @@
 				action="/administrator/inquiries/list" />
 			<acme:menu-suboption code="master.menu.administrator.challenges.list" 
 				action="/administrator/challenges/list" />
+			<acme:menu-suboption code="master.menu.administrator.configuration"
+				action="/administrator/configuration/list" />
 				
 			<acme:menu-separator/>
 			

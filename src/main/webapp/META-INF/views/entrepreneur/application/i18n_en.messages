@@ -24,6 +24,8 @@ entrepreneur.application.list.label.status = Status
 
 entrepreneur.application.update.no-empty = You must give a justification if you reject the application
 
+entrepreneur.application.error.spam = Spam detected
+
 entrepreneur.application.form.button.update = Update
 
 entrepreneur.application.form.button.return = Return

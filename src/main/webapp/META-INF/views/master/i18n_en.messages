@@ -73,6 +73,7 @@ master.menu.administrator.challenges.list = List challenges
 master.menu.administrator.challenges.create = Create challenge
 master.menu.administrator.overtures.list = List overtures
 master.menu.administrator.overtures.create = Create overture
+master.menu.administrator.configuration = List configuration parameters
 
 # master.menu.provider ########################################################
 
