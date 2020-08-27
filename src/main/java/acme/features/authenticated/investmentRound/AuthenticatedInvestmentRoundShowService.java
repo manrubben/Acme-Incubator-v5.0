@@ -31,7 +31,7 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		currentInvestmentRound = this.repository.findOneById(investmentRoundId);
 		principal = request.getPrincipal();
 
-		result = currentInvestmentRound.getFinalMode() == true || currentInvestmentRound.getFinalMode() == false && currentInvestmentRound.getEntrepreneur().getUserAccount().getId() == principal.getAccountId();
+		result = currentInvestmentRound.getFinalMode() == true;
 
 		return result;
 	}

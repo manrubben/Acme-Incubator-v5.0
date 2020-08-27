@@ -31,7 +31,7 @@ public class AuthenticatedActivityShowService implements AbstractShowService<Aut
 		currentActivity = this.repository.findOneById(activityId);
 		principal = request.getPrincipal();
 
-		result = currentActivity.getInvestmentRound().getFinalMode() == true || currentActivity.getInvestmentRound().getFinalMode() == false && currentActivity.getInvestmentRound().getEntrepreneur().getUserAccount().getId() == principal.getAccountId();
+		result = currentActivity.getInvestmentRound().getFinalMode() == true;
 
 		return result;
 	}
