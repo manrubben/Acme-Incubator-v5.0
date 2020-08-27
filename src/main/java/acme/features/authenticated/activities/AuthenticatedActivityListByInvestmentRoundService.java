@@ -41,10 +41,12 @@ public class AuthenticatedActivityListByInvestmentRoundService implements Abstra
 		assert request != null;
 
 		Collection<Activity> result;
-		Integer idInvestmentRound;
+		int id;
 
-		idInvestmentRound = request.getModel().getInteger("id");
-		result = this.repository.findManyByInvestmentRound(idInvestmentRound);
+		id = request.getModel().getInteger("id");
+
+		result = this.repository.findManyByInvestmentRound(id);
+		result.size();
 
 		return result;
 	}
