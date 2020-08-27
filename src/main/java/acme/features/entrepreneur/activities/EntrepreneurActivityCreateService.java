@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Activity;
+import acme.entities.Configuration;
 import acme.entities.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.features.entrepreneur.investmentRounds.EntrepreneurInvestmentRoundRepository;
@@ -74,6 +75,14 @@ public class EntrepreneurActivityCreateService implements AbstractCreateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.activityRepository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("title")) {
+			boolean isSpam = config.isSpam(entity.getTitle());
+			errors.state(request, !isSpam, "title", "entrepreneur.activity.error.spam");
+		}
 
 		if (!errors.hasErrors("start")) {
 			Boolean isBefore = entity.getStart().isBefore(entity.getEnd());

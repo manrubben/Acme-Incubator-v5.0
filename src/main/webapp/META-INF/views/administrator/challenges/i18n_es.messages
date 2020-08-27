@@ -40,4 +40,5 @@ administrator.challenges.error.euroZone = Solo se admiten euros
 administrator.challenges.error.rookieReward = La recompesa de novato debe ser menor que la de normal
 administrator.challenges.error.averageReward = La recompensa de normal debe ser menor que la de experto
 administrator.challenges.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
+administrator.challenges.error.spam = Spam detectado
 

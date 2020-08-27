@@ -42,3 +42,4 @@ administrator.challenges.error.euroZone = Only euro currency supported
 administrator.challenges.error.rookieReward = Rookie reward must be lower than Average reward
 administrator.challenges.error.averageReward = Average reward must be lower than Expert reward
 administrator.challenges.error.deadlineIsAfter = Deadline must be after the current date
+administrator.challenges.error.spam = Spam detected

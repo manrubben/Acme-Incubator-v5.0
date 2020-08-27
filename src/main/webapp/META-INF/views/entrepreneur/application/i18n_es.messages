@@ -23,6 +23,8 @@ entrepreneur.application.list.label.creation = Creación
 entrepreneur.application.list.label.status = Estado
 
 entrepreneur.application.update.no-empty = Debes dar una justificación si rechazas la aplicación
+entrepreneur.application.error.spam = Spam detectado
+
 
 entrepreneur.application.form.button.update = Actualizar
 

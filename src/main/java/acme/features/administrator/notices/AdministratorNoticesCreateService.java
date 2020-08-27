@@ -76,17 +76,17 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 
 		if (!errors.hasErrors("headerPicture")) {
 			boolean isSpam = config.isSpam(entity.getHeaderPicture());
-			errors.state(request, !isSpam, "headerPicture", "administrator.headerPicture.error.spam");
+			errors.state(request, !isSpam, "headerPicture", "administrator.notices.error.spam");
 		}
 
 		if (!errors.hasErrors("body")) {
 			boolean isSpam = config.isSpam(entity.getBody());
-			errors.state(request, !isSpam, "body", "administrator.body.error.spam");
+			errors.state(request, !isSpam, "body", "administrator.notices.error.spam");
 		}
 
 		if (!errors.hasErrors("links")) {
 			boolean isSpam = config.isSpam(entity.getLinks());
-			errors.state(request, !isSpam, "links", "administrator.links.error.spam");
+			errors.state(request, !isSpam, "links", "administrator.notices.error.spam");
 		}
 
 		if (!errors.hasErrors("accept")) {

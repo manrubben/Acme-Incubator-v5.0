@@ -25,7 +25,6 @@ administrator.inquiries.form.button.delete = Eliminar
 
 administrator.inquiries.error.must-be-eur = La moneda debe estar en euros 
 administrator.inquiries.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
-
-
+administrator.inquiries.error.spam = Spam detectado
 
 administrator.inquiries.form.button.return = Volver

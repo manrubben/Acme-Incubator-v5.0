@@ -34,3 +34,5 @@ administrator.tool-records.form.label.activitySector.health = Salud
 
 administrator.tool-records.form.label.indication.open-source = Código abierto
 administrator.tool-records.form.label.indication.closed-source = Código cerrado
+
+administrator.tool-records.error.spam = Spam detectado

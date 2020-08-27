@@ -38,3 +38,5 @@ administrator.technology-records.form.label.activitySector.health = Health
 
 administrator.technology-records.form.label.indication.open-source = Open source
 administrator.technology-records.form.label.indication.closed-source = Closed source
+
+administrator.technology-records.error.spam = Spam detected

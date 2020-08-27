@@ -68,13 +68,12 @@ master.menu.administrator.technology-records.list = Listar registros tecnológic
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.inquiries.list = Listar solicitudes
 master.menu.administrator.inquiries.create = Crear solicitud
-
 master.menu.administrator.notices.create = Crear noticia
-
 master.menu.administrator.challenges.list = Listar desafíos
 master.menu.administrator.challenges.create = Crear desafío
 master.menu.administrator.overtures.list = Listar propuestas
 master.menu.administrator.overtures.create = Crear propuesta
+master.menu.administrator.configuration = Listar parámetros de configuración 
 
 # master.menu.provider ########################################################
 

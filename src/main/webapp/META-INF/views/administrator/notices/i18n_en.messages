@@ -22,5 +22,6 @@ administrator.notices.form.label.accept = Accept
 
 administrator.notices.error.must-accept = Must be accepted
 administrator.notices.error.deadlineIsAfter = Deadline must be after the current date
+administrator.notices.error.spam = Spam detected
 
 administrator.notices.button.return = Return 

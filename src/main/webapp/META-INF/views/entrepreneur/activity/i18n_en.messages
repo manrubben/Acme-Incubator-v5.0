@@ -22,6 +22,8 @@ entrepreneur.activity.error.is-final = Can't delete a activity if investment rou
 entrepreneur.activity.error.start = Start must be before end
 entrepreneur.activity.error.budget = Only euro currency supported
 entrepreneur.activity.error.isAfterThanToday = Start must be after the current date
+entrepreneur.activity.error.spam = Spam detected
+
 
 entrepreneur.activity.form.button.create = Create
 entrepreneur.activity.form.button.update = Update
