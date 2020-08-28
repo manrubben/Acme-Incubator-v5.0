@@ -18,3 +18,4 @@ authenticated.overtures.form.label.email = Email:
 authenticated.overtures.form.button.return = Return
 
 authenticated.overtures.list.label.title = Title
+authenticated.overtures.list.label.creation = Creation
