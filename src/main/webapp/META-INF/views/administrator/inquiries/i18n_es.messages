@@ -26,5 +26,7 @@ administrator.inquiries.form.button.delete = Eliminar
 administrator.inquiries.error.must-be-eur = La moneda debe estar en euros 
 administrator.inquiries.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
 administrator.inquiries.error.spam = Spam detectado
+administrator.inquiries.error.is-greater = El dinero máximo debe ser mayor que el dinero mínimo
+
 
 administrator.inquiries.form.button.return = Volver

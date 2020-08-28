@@ -18,6 +18,7 @@
 <acme:form>
 	<acme:form-textbox code="administrator.configuration.form.label.spamWords" path="spamWords"/>
 	<acme:form-textbox code="administrator.configuration.form.label.spamThreshold" path="spamThreshold"/>
+	<acme:form-textbox code="administrator.configuration.form.label.activitySectors" path="activitySectors"/>
 	<acme:form-submit   
 	                   code="administrator.configuration.form.label.button.update" 
 	                   action="/administrator/configuration/update"/>

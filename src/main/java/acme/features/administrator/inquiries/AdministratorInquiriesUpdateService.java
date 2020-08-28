@@ -84,16 +84,6 @@ public class AdministratorInquiriesUpdateService implements AbstractUpdateServic
 			boolean isSpam = config.isSpam(entity.getEmail());
 			errors.state(request, !isSpam, "email", "administrator.inquiries.error.spam");
 		}
-		
-		if (!errors.hasErrors("moneyMin")) {
-			Boolean isEur = entity.getMoneyMin().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
-			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
-		}
-
-		if (!errors.hasErrors("moneyMax")) {
-			Boolean isEur = entity.getMoneyMax().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
-			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
-		}
 
 		if (!errors.hasErrors("moneyMin")) {
 			Boolean isEur = entity.getMoneyMin().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
@@ -103,6 +93,12 @@ public class AdministratorInquiriesUpdateService implements AbstractUpdateServic
 		if (!errors.hasErrors("moneyMax")) {
 			Boolean isEur = entity.getMoneyMax().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "moneyMin", "administrator.inquiries.error.must-be-eur");
+		}
+
+		if (!errors.hasErrors("moneyMax")) {
+			Double moneyMin = entity.getMoneyMin().getAmount();
+			boolean isGreater = entity.getMoneyMax().getAmount().compareTo(moneyMin) > 0;
+			errors.state(request, isGreater, "moneyMax", "administrator.inquiries.error.is-greater");
 		}
 
 		if (!errors.hasErrors("deadline")) {
