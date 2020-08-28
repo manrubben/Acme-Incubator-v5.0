@@ -95,6 +95,12 @@ public class AdministratorOverturesCreateService implements AbstractCreateServic
 			errors.state(request, isEur, "moneyMin", "administrator.overtures.error.must-be-eur");
 		}
 
+		if (!errors.hasErrors("moneyMax")) {
+			Double moneyMin = entity.getMoneyMin().getAmount();
+			boolean isGreater = entity.getMoneyMax().getAmount().compareTo(moneyMin) > 0;
+			errors.state(request, isGreater, "moneyMax", "administrator.overtures.error.is-greater");
+		}
+
 		if (!errors.hasErrors("deadline")) {
 			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
 			errors.state(request, isAfter, "deadline", "administrator.overtures.error.deadlineIsAfter");

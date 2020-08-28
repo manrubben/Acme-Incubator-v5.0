@@ -10,6 +10,7 @@ import javax.persistence.Transient;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 
 import acme.framework.entities.DomainEntity;
@@ -35,6 +36,10 @@ public class Configuration extends DomainEntity {
 	@Range(min = 0, max = 1)
 	@Digits(integer = 1, fraction = 3)
 	private Double				spamThreshold;
+
+	@NotBlank
+	@Length(max = 255)
+	private String				activitySectors;
 
 
 	@Transient
