@@ -112,7 +112,13 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 				boolean isSpamDescription = config.isSpam(entity.getDescription());
 				boolean isSpamLink = config.isSpam(entity.getLink());
 
-				boolean sumaCorrecta = totalBudget == dinero;
+				boolean sumaCorrecta = false;
+
+				if (totalBudget.equals(dinero)) {
+
+					sumaCorrecta = true;
+
+				}
 
 				boolean noHaySpam = !isSpamTitle & !isSpamDescription && !isSpamLink;
 
