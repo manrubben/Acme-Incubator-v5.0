@@ -18,3 +18,4 @@ authenticated.notices.form.label.links = Links:
 authenticated.notices.form.button.return = Return
 
 authenticated.notices.list.label.title = Title
+authenticated.notices.list.label.creation = Creation

@@ -15,8 +15,8 @@ administrator.inquiries.form.label.title = Title:
 administrator.inquiries.form.label.creation = Creation:
 administrator.inquiries.form.label.deadline = Deadline:
 administrator.inquiries.form.label.paragraph = Paragraph:
-administrator.inquiries.form.label.moneyMin = MoneyMin:
-administrator.inquiries.form.label.moneyMax = MoneyMax:
+administrator.inquiries.form.label.moneyMin = Minimum money:
+administrator.inquiries.form.label.moneyMax = Maximum money:
 administrator.inquiries.form.label.email = Email:
 
 administrator.inquiries.form.button.create = Create

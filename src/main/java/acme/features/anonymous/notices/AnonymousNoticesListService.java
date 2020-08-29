@@ -32,7 +32,7 @@ public class AnonymousNoticesListService implements AbstractListService<Anonymou
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title");
+		request.unbind(entity, model, "title", "creation");
 
 	}
 

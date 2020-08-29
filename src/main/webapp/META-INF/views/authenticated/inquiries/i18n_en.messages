@@ -21,3 +21,4 @@ authenticated.inquiries.form.label.email = Email:
 authenticated.inquiries.form.button.return = Return
 
 authenticated.inquiries.list.label.title = Title
+authenticated.inquiries.list.label.creation = Creation

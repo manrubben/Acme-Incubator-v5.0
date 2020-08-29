@@ -17,7 +17,6 @@ entrepreneur.activity.form.label.budget = Budget:
 entrepreneur.activity.list.label.title = Title
 entrepreneur.activity.list.label.budget = Budget
 
-entrepreneur.activity.error.job-not-mine = Can't update duties for other entrepreneurs investment rounds
 entrepreneur.activity.error.is-final = Can't delete a activity if investment round is in final mode
 entrepreneur.activity.error.start = Start must be before end
 entrepreneur.activity.error.budget = Only euro currency supported

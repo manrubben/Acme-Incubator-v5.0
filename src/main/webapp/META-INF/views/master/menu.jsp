@@ -20,22 +20,6 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manu"
-				action="https://github.com/manrubben" />
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.adri"
-				action="https://github.com/adrmadfer" />
-			<acme:menu-suboption
-				code="master.menu.anonymous.favourite-link.ignacio"
-				action="https://github.com/ignsanalo" />
-			<acme:menu-suboption
-				code="master.menu.anonymous.favourite-link.alvaro"
-				action="https://github.com/alvdiaasc97" />
-			<acme:menu-suboption
-				code="master.menu.anonymous.favourite-link.josema"
-				action="https://github.com/josgalbal" />
-			<acme:menu-suboption
-				code="master.menu.anonymous.favourite-link.guille"
-				action="https://github.com/guipavvar" />
 			<acme:menu-suboption
 				code="master.menu.anonymous.technology-records.list"
 				action="/anonymous/technology-records/list" />

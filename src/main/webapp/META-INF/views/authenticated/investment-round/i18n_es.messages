@@ -23,4 +23,4 @@ authenticated.investment-round.form.button.activity-list = Listar actividades
 authenticated.investment-round.form.button.return = Volver
 
 authenticated.investment-round.list.label.title = Título
-authenticated.investment-round.list.label.entrepreneur = Empresario
+authenticated.investment-round.list.label.money = Dinero

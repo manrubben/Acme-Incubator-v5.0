@@ -23,4 +23,4 @@ authenticated.investment-round.form.button.activity-list = List activities
 authenticated.investment-round.form.button.return = Return
 
 authenticated.investment-round.list.label.title = Title
-authenticated.investment-round.list.label.entrepreneur = Entrepreneur
+authenticated.investment-round.list.label.money = Money

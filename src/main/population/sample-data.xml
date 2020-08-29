@@ -141,7 +141,7 @@
 	<bean id="challenge01" class="acme.entities.Challenges">
 		<property name="title" value="Challenge 1" />
 		<property name="deadline" value="20-06-2040 23:11" />
-		<property name="description" value="blablabla" />
+		<property name="description" value="This is a sample description" />
 		<property name="expertGoal" value="Experto" />
 		<property name="averageGoal" value="Average" />
 		<property name="rookieGoal" value="Rookie" />
@@ -153,7 +153,7 @@
 	<bean id="challenge02" class="acme.entities.Challenges">
 		<property name="title" value="Challenge 2" />
 		<property name="deadline" value="20-06-2030 20:11" />
-		<property name="description" value="Challenge" />
+		<property name="description" value="This is a sample description of challenge" />
 		<property name="expertGoal" value="Experto" />
 		<property name="averageGoal" value="Average" />
 		<property name="rookieGoal" value="Rookie" />

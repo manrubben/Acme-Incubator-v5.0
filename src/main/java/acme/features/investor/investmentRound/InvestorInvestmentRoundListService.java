@@ -32,7 +32,7 @@ public class InvestorInvestmentRoundListService implements AbstractListService<I
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creation");
+		request.unbind(entity, model, "title", "money");
 	}
 
 	@Override

@@ -17,3 +17,6 @@ anonymous.notices.form.label.links = Links:
 
 anonymous.notices.form.button.return = Return
 
+anonymous.notices.list.label.title = Title
+anonymous.notices.list.label.creation = Creation
+

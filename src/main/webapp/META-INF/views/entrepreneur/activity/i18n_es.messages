@@ -16,7 +16,6 @@ entrepreneur.activity.form.label.budget = Presupuesto:
 entrepreneur.activity.list.label.title = Título
 entrepreneur.activity.list.label.budget = Presupuesto
 
-entrepreneur.activity.error.job-not-mine = No se puede editar una ronda de inversión de otro empresario
 entrepreneur.activity.error.is-final = No se puede borrar una actividad si la ronda de inversión está en modo final
 entrepreneur.activity.error.start = La fecha de inicio debe ser anterior a la fecha final
 entrepreneur.activity.error.budget = Solo se admiten euros

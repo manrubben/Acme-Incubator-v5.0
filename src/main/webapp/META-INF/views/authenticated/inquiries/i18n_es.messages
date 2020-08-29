@@ -20,3 +20,4 @@ authenticated.inquiries.form.label.email = Email:
 authenticated.inquiries.form.button.return = Volver
 
 authenticated.inquiries.list.label.title = Título
+authenticated.inquiries.list.label.creation = Creación

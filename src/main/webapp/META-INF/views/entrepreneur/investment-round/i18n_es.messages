@@ -8,9 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-entrepreneur.investmentRound.list.label.ticker = Ticker
-entrepreneur.investmentRound.list.label.creation = Creación
 entrepreneur.investmentRound.list.label.title = Título
+entrepreneur.investmentRound.list.label.money = Dinero
 
 entrepreneur.investmentRound.form.label.ticker = Ticker:
 entrepreneur.investmentRound.form.label.creation = Creación:

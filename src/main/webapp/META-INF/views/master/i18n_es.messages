@@ -29,12 +29,6 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link.manu = Enlace favorito de Manu
-master.menu.anonymous.favourite-link.adri = Enlace favorito de Adri
-master.menu.anonymous.favourite-link.ignacio = Enlace favorito de Ignacio
-master.menu.anonymous.favourite-link.alvaro = Enlace favorito de Alvaro
-master.menu.anonymous.favourite-link.josema = Enlace favorito de Josema
-master.menu.anonymous.favourite-link.guille = Enlace favorito de Guille
 master.menu.anonymous.tool-records.list = Listar registros de herramientas
 master.menu.anonymous.technology-records.list = Listar registros tecnológicos
 master.menu.anonymous.notices.list = Listar noticias
