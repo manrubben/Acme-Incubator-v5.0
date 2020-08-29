@@ -343,7 +343,7 @@
 	<bean name="application01" class="acme.entities.Application">
 		<property name="ticker" value="SEC-20-123456" />
 		<property name="creation" value="20-07-2020 20:11" />
-		<property name="status" value="ACCEPTED" />
+		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
 		<property name="investor" ref="investor1Investor" />

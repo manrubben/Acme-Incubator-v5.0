@@ -13,13 +13,13 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorTechnologyRecordsListService
-		implements AbstractListService<Administrator, TechnologyRecords> {
+public class AdministratorTechnologyRecordsListService implements AbstractListService<Administrator, TechnologyRecords> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	AdministratorTechnologyRecordsRepository repository;
+
 
 	@Override
 	public boolean authorise(final Request<TechnologyRecords> request) {
@@ -34,7 +34,7 @@ public class AdministratorTechnologyRecordsListService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "activitySector", "inventorsName", "description");
+		request.unbind(entity, model, "title", "activitySector", "stars");
 	}
 
 	@Override

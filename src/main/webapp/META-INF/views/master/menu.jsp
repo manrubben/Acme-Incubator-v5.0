@@ -143,6 +143,12 @@
 			<acme:menu-suboption code="master.menu.user-account.become-provider"
 				action="/authenticated/provider/create"
 				access="!hasRole('Provider')" />
+			<acme:menu-suboption code="master.menu.user-account.become-entrepreneur" 
+			    action="/authenticated/entrepreneur/create" 
+			    access="!hasRole('Entrepreneur')"/>
+			<acme:menu-suboption code="master.menu.user-account.entrepreneur" 
+			    action="/authenticated/entrepreneur/update" 
+			    access="hasRole('Entrepreneur')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-investor" 
 			    action="/authenticated/investor/create" 
 			    access="!hasRole('Investor')"/>

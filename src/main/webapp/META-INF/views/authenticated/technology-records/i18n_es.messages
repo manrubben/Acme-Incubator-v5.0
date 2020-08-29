@@ -19,4 +19,6 @@ authenticated.technology-records.form.label.stars = Estrellas:
 
 authenticated.technology-records.form.button.return = Volver
 
+authenticated.technology-records.list.label.title = Título
 authenticated.technology-records.list.label.activitySector = Sector de actividad
+authenticated.technology-records.list.label.stars = Estrellas

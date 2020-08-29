@@ -22,8 +22,9 @@ administrator.technology-records.form.label.email = Email:
 administrator.technology-records.form.label.indication = Indication:
 administrator.technology-records.form.label.stars = Stars:
 
-
-administrator.technology-records.list.label.activitySector = Activity sector
+administrator.technology-records.list.label.title = Title
+administrator.technology-records.list.label.activitySector = Activity Sector
+administrator.technology-records.list.label.stars = Stars
 
 administrator.technology-records.form.button.create = Create
 administrator.technology-records.form.button.update = Update

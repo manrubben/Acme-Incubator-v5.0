@@ -30,20 +30,7 @@
 	<acme:form-textbox code="investor.investmentRound.form.label.title" path="title" />
 	<acme:form-textarea code="investor.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="investor.investmentRound.form.label.money" path="money" />
-	<acme:form-url code="investor.investmentRound.form.label.link" path="link" />
-	
-		<acme:form-select code="investor.investmentRound.form.label.finalMode" path="finalMode">
-			<acme:form-option code="investor.investmentRound.form.label.finalMode.yes" value="true"/>
-			<jstl:choose>
-				<jstl:when test="${!finalMode}">
-					<acme:form-option code="investor.investmentRound.form.label.finalMode.no" selected = "true" value="false"/>
-				</jstl:when>
-				<jstl:otherwise>
-					<acme:form-option code="investor.investmentRound.form.label.finalMode.no" value="false"/>
-				</jstl:otherwise>
-			</jstl:choose>
-		</acme:form-select>
-		
+	<acme:form-url code="investor.investmentRound.form.label.link" path="link" />	
 	<jstl:if test="${isNotApped }">
 	<acme:form-submit code="investor.app.investmenRound.button" method="get"  action="/investor/application/create?InvestmentRoundId=${id}"/>
 	</jstl:if>

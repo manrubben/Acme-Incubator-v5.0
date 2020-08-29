@@ -76,13 +76,13 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 
 		boolean isRejected = entity.getStatus().equals(ApplicationStatus.REJECTED);
 
-		if (isRejected) {
-			if (!errors.hasErrors("justification")) {
+		if (!errors.hasErrors("justification")) {
+			if (isRejected) {
 				boolean isEmpty = entity.getJustification().length() == 0;
 				errors.state(request, !isEmpty, "justification", "entrepreneur.application.update.no-empty");
 			}
 		}
-		
+
 		if (!errors.hasErrors("money")) {
 			Boolean isEur = entity.getMoney().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "money", "investor.application.error.money");
