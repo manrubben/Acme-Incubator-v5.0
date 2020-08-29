@@ -543,15 +543,15 @@ has v</panel_attributes>
     <coordinates>
       <x>1830</x>
       <y>130</y>
-      <w>340</w>
-      <h>130</h>
+      <w>350</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Configuration
 --
 + spamWords: String {NotBlank}
 + spamThreshold : Double {Range, Digits}
-
++ activitySectors: String {NotBlank, Length (max = 255)
 
 </panel_attributes>
     <additional_attributes/>
