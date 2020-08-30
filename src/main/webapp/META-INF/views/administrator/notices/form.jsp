@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="administrator.notices.form.label.headerPicture" path="headerPicture"/>
+	<acme:form-url code="administrator.notices.form.label.headerPicture" path="headerPicture"/>
 	<acme:form-textbox code="administrator.notices.form.label.title" path="title"/>
 	
 	<jstl:if test="${command !='create' }">
@@ -25,9 +25,13 @@
 	
 	<acme:form-moment code="administrator.notices.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.notices.form.label.body" path="body"/>
-	<acme:form-url code="administrator.notices.form.label.links" path="links"/>
+	<acme:form-textbox code="administrator.notices.form.label.links" path="links"/>
 	
+	
+	<jstl:if test="${command =='create' }">
 	<acme:form-checkbox code="administrator.notices.form.label.accept" path="accept" />
+	</jstl:if>
+	
 	
   	<acme:form-submit test="${command == 'create'}" 
   	code="administrator.notices.form.button.create" 

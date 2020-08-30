@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Configuration;
 import acme.entities.Notices;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
@@ -70,10 +71,34 @@ public class AdministratorNoticesCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert errors != null;
 
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("headerPicture")) {
+			boolean isSpam = config.isSpam(entity.getHeaderPicture());
+			errors.state(request, !isSpam, "headerPicture", "administrator.notices.error.spam");
+		}
+
+		if (!errors.hasErrors("body")) {
+			boolean isSpam = config.isSpam(entity.getBody());
+			errors.state(request, !isSpam, "body", "administrator.notices.error.spam");
+		}
+
+		if (!errors.hasErrors("links")) {
+			boolean isSpam = config.isSpam(entity.getLinks());
+			errors.state(request, !isSpam, "links", "administrator.notices.error.spam");
+		}
+
 		if (!errors.hasErrors("accept")) {
 			Boolean isAccepted = request.getModel().getBoolean("accept");
 			errors.state(request, isAccepted, "accept", "administrator.notices.error.must-accept");
 		}
+
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.notices.error.deadlineIsAfter");
+		}
+
 	}
 
 	@Override

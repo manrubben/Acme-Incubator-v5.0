@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.Configuration;
 import acme.entities.ToolRecords;
 import acme.framework.repositories.AbstractRepository;
 
@@ -17,5 +18,8 @@ public interface AdministratorToolRecordsRepository extends AbstractRepository {
 
 	@Query("select tr from ToolRecords tr")
 	Collection<ToolRecords> findManyAll();
+
+	@Query("select c from Configuration c")
+	Collection<Configuration> findManyConfiguration();
 
 }

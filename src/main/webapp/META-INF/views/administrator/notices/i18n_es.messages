@@ -16,9 +16,12 @@ administrator.notices.form.label.title = Título:
 administrator.notices.form.label.creation = Creación:
 administrator.notices.form.label.deadline = Fecha límite:
 administrator.notices.form.label.body = Cuerpo:
-administrator.notices.form.label.links = Links:
+administrator.notices.form.label.links = Enlaces:
 administrator.notices.form.button.create = Crear
 administrator.notices.form.label.accept = Aceptar
+
 administrator.notices.error.must-accept = Debe ser aceptado
+administrator.notices.error.deadlineIsAfter = La fecha límite debe ser posterior a la fecha actual
+administrator.notices.error.spam = Spam detectado
 
 administrator.notices.button.return = Volver 

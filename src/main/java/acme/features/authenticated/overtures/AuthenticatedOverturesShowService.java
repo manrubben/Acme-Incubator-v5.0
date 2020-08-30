@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.overtures;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,16 @@ public class AuthenticatedOverturesShowService implements AbstractShowService<Au
 	public boolean authorise(final Request<Overtures> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		int overtureId;
+		Overtures currentOverture;
+
+		overtureId = request.getModel().getInteger("id");
+		currentOverture = this.repository.findOneById(overtureId);
+
+		result = currentOverture.getDeadline().isAfter(LocalDateTime.now());
+
+		return result;
 	}
 
 	@Override
@@ -30,7 +41,7 @@ public class AuthenticatedOverturesShowService implements AbstractShowService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "rangeMoney", "email");
+		request.unbind(entity, model, "title", "creation", "deadline", "paragraph", "moneyMin", "moneyMax", "email");
 	}
 
 	@Override

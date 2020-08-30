@@ -18,7 +18,7 @@
 
 <%@attribute name="code" required="true" type="java.lang.String"%>
 
-<div style="font-size: 80%">
+<div style="font-size: 80%; margin-top: -25px;">
 	<jsp:useBean id="date" class="java.util.Date"/>
 	Copyright &copy;
 	<acme:format value="${date}" format="{0,date,yyyy}"/>

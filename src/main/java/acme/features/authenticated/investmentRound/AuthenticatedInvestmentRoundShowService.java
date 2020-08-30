@@ -8,6 +8,7 @@ import acme.entities.InvestmentRound;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -16,11 +17,23 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 	@Autowired
 	private AuthenticatedInvestmentRoundRepository repository;
 
+
 	@Override
 	public boolean authorise(final Request<InvestmentRound> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		int investmentRoundId;
+		InvestmentRound currentInvestmentRound;
+		Principal principal;
+
+		investmentRoundId = request.getModel().getInteger("id");
+		currentInvestmentRound = this.repository.findOneById(investmentRoundId);
+		principal = request.getPrincipal();
+
+		result = currentInvestmentRound.getFinalMode() == true;
+
+		return result;
 	}
 
 	@Override

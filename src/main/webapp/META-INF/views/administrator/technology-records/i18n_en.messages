@@ -1,8 +1,16 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
 
 administrator.technology-records.form.button.update = Update
 administrator.technology-records.form.button.show = Create
 administrator.technology-records.form.button.delete = Delete
-
 
 
 administrator.technology-records.form.label.title = Title:
@@ -14,15 +22,22 @@ administrator.technology-records.form.label.email = Email:
 administrator.technology-records.form.label.indication = Indication:
 administrator.technology-records.form.label.stars = Stars:
 
-
-administrator.technology-records.list.label.title = Title:
-administrator.technology-records.list.label.activitySector = Activity sector:
-administrator.technology-records.list.label.inventorsName = Inventor's name:
-administrator.technology-records.list.label.description = Description:
+administrator.technology-records.list.label.title = Title
+administrator.technology-records.list.label.activitySector = Activity Sector
+administrator.technology-records.list.label.stars = Stars
 
 administrator.technology-records.form.button.create = Create
 administrator.technology-records.form.button.update = Update
 administrator.technology-records.form.button.delete = Delete
 administrator.technology-records.form.button.return = Return
 
-administrator.technology-records.list.label.title = Title
+administrator.technology-records.form.label.activitySector.technology = Technology
+administrator.technology-records.form.label.activitySector.science = Science
+administrator.technology-records.form.label.activitySector.arts = Arts
+administrator.technology-records.form.label.activitySector.business = Business
+administrator.technology-records.form.label.activitySector.health = Health
+
+administrator.technology-records.form.label.indication.open-source = Open source
+administrator.technology-records.form.label.indication.closed-source = Closed source
+
+administrator.technology-records.error.spam = Spam detected

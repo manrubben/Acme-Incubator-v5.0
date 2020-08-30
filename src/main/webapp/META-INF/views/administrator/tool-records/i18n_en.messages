@@ -14,7 +14,7 @@ administrator.tool-records.list.label.stars = Stars
 
 administrator.tool-records.form.label.title = Title:
 administrator.tool-records.form.label.activitySector = Activity Sector:
-administrator.tool-records.form.label.inventorsName = inventorsName:
+administrator.tool-records.form.label.inventorsName = Inventor's name:
 administrator.tool-records.form.label.description = Description:
 administrator.tool-records.form.label.website = Website:
 administrator.tool-records.form.label.email = Email:
@@ -25,4 +25,15 @@ administrator.tool-records.form.button.create = Create
 administrator.tool-records.form.button.update = Update
 administrator.tool-records.form.button.delete = Delete
 
-administrator.tool-records.button.return = Return 
+administrator.tool-records.button.return = Return
+
+administrator.tool-records.form.label.activitySector.technology = Technology
+administrator.tool-records.form.label.activitySector.science = Science
+administrator.tool-records.form.label.activitySector.arts = Arts
+administrator.tool-records.form.label.activitySector.business = Business
+administrator.tool-records.form.label.activitySector.health = Health
+
+administrator.tool-records.form.label.indication.open-source = Open source
+administrator.tool-records.form.label.indication.closed-source = Closed source
+
+administrator.tool-records.error.spam = Spam detected

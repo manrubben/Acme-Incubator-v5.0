@@ -32,7 +32,7 @@ public class AuthenticatedTechnologyRecordsListService implements AbstractListSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title");
+		request.unbind(entity, model, "title", "activitySector", "stars");
 
 	}
 

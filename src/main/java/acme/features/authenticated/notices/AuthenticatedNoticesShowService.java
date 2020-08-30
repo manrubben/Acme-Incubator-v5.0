@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.notices;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,16 @@ public class AuthenticatedNoticesShowService implements AbstractShowService<Auth
 	public boolean authorise(final Request<Notices> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		int noticeId;
+		Notices currentNotice;
+
+		noticeId = request.getModel().getInteger("id");
+		currentNotice = this.repository.findOneById(noticeId);
+
+		result = currentNotice.getDeadline().isAfter(LocalDateTime.now());
+
+		return result;
 	}
 
 	@Override

@@ -8,17 +8,17 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.tool-records.list.label.title = Título
-administrator.tool-records.list.label.activitySector = Sector de actividad
-administrator.tool-records.list.label.stars = Estrellas
+anonymous.tool-records.list.label.title = Título
+anonymous.tool-records.list.label.activitySector = Sector de actividad
+anonymous.tool-records.list.label.stars = Estrellas
 
-administrator.tool-records.form.label.title = Título:
-administrator.tool-records.form.label.activitySector = Sector de actividad:
-administrator.tool-records.form.label.inventorsName = Inventor:
-administrator.tool-records.form.label.description = Descripción:
-administrator.tool-records.form.label.website = Sitio web:
-administrator.tool-records.form.label.email = Email:
-administrator.tool-records.form.label.indication = Indicación:
-administrator.tool-records.form.label.stars = Estrellas:
+anonymous.tool-records.form.label.title = Título:
+anonymous.tool-records.form.label.activitySector = Sector de actividad:
+anonymous.tool-records.form.label.inventorsName = Inventor:
+anonymous.tool-records.form.label.description = Descripción:
+anonymous.tool-records.form.label.website = Sitio web:
+anonymous.tool-records.form.label.email = Email:
+anonymous.tool-records.form.label.indication = Indicación:
+anonymous.tool-records.form.label.stars = Estrellas:
 
-administrator.tool-records.button.return = Volver 
+anonymous.tool-records.button.return = Volver 

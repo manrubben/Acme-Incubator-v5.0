@@ -4,6 +4,7 @@ package acme.entities;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -45,7 +46,12 @@ public class Overtures extends DomainEntity {
 	private String				paragraph;
 
 	@NotNull
-	private Money				rangeMoney;
+	@Valid
+	private Money				moneyMin;
+
+	@NotNull
+	@Valid
+	private Money				moneyMax;
 
 	@Email
 	@NotBlank

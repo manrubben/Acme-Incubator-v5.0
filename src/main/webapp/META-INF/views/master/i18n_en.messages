@@ -10,13 +10,13 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #f9f7ed
 
 # master.welcome ##############################################################
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Starter Project! Never before has it bee easier to get your \
+	Welcome to Acme Incubator! Never before has it bee easier to get your \
 	project up and running!
 
 # master.menu #################################################################
@@ -29,12 +29,6 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.favourite-link.manu = Manu's favourite link
-master.menu.anonymous.favourite-link.adri = Adri's favourite link
-master.menu.anonymous.favourite-link.ignacio = Ignacio's favourite link
-master.menu.anonymous.favourite-link.alvaro = Alvaro's favourite link
-master.menu.anonymous.favourite-link.josema = Josema's favourite link
-master.menu.anonymous.favourite-link.guille = Guille's favourite link
 master.menu.anonymous.tool-records.list = List tool records
 master.menu.anonymous.technology-records.list = List technology records
 master.menu.anonymous.notices.list = List notices
@@ -54,6 +48,7 @@ master.menu.authenticated.investment-round = List investment rounds
 
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investmentRound.list-mine = List investment rounds
+master.menu.entrepreneur.investmentRound.create = Create investment round
 
 # master.menu.administrator ###################################################
 
@@ -62,8 +57,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notices = List notices
 master.menu.administrator.create-tool-records = Create tool record
 master.menu.administrator.list-tool-records = List tool records
-master.menu.administrator.technology-records.create = Create technology Record
-master.menu.administrator.technology-records.list = List technology Records
+master.menu.administrator.technology-records.create = Create technology record
+master.menu.administrator.technology-records.list = List technology records
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.inquiries.list = List inquiries
 master.menu.administrator.inquiries.create = Create inquirie
@@ -72,6 +67,7 @@ master.menu.administrator.challenges.list = List challenges
 master.menu.administrator.challenges.create = Create challenge
 master.menu.administrator.overtures.list = List overtures
 master.menu.administrator.overtures.create = Create overture
+master.menu.administrator.configuration = List configuration parameters
 
 # master.menu.provider ########################################################
 
@@ -87,6 +83,7 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.investor = Investor
 master.menu.investor.application.list-mine = List my applications
+master.menu.investor.investment-round.list = List investments rounds
 
 # master.menu.user-account ####################################################
 
@@ -96,6 +93,11 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-entrepreneur = Become a entrepreneur
+master.menu.user-account.entrepreneur = Entrepreneur data
+master.menu.user-account.become-investor = Become an investor
+master.menu.user-account.investor = Investor Data
+
 
 # master.footer ###############################################################
 
@@ -113,10 +115,10 @@ master.footer.label.spanish = Spanish
 
 master.company.title = La compañía
 master.company.text = \
-	Starter Project, Inc. is a fictitious fictitious company that provides a \
+	Acme Incubator, Inc. is a fictitious company that provides a \
 	starter project for the students of the Design and Testing subject of the \
 	Software Engineering Curriculum of the University of Sevilla.
-master.company.name = Starter Project, Inc.
+master.company.name = Acme Incubator, Inc.
 master.company.address = Number Street, City, State, Country
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com

@@ -32,7 +32,7 @@ public class AdministratorInquiriesListService implements AbstractListService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title");
+		request.unbind(entity, model, "title", "creation");
 
 	}
 
@@ -42,7 +42,7 @@ public class AdministratorInquiriesListService implements AbstractListService<Ad
 
 		Collection<Inquiries> result;
 
-		result = this.repository.findManyAll();
+		result = this.repository.findManyAllActives();
 
 		return result;
 	}

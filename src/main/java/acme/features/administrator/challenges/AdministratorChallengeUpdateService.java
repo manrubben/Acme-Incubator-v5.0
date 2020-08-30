@@ -1,10 +1,13 @@
 
 package acme.features.administrator.challenges;
 
+import java.time.LocalDateTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Challenges;
+import acme.entities.Configuration;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -62,6 +65,34 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert errors != null;
 
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (!errors.hasErrors("title")) {
+			boolean isSpam = config.isSpam(entity.getTitle());
+			errors.state(request, !isSpam, "title", "administrator.challenges.error.spam");
+		}
+
+		if (!errors.hasErrors("description")) {
+			boolean isSpam = config.isSpam(entity.getDescription());
+			errors.state(request, !isSpam, "description", "administrator.challenges.error.spam");
+		}
+
+		if (!errors.hasErrors("expertGoal")) {
+			boolean isSpam = config.isSpam(entity.getExpertGoal());
+			errors.state(request, !isSpam, "expertGoal", "administrator.challenges.error.spam");
+		}
+
+		if (!errors.hasErrors("averageGoal")) {
+			boolean isSpam = config.isSpam(entity.getAverageGoal());
+			errors.state(request, !isSpam, "averageGoal", "administrator.challenges.error.spam");
+		}
+
+		if (!errors.hasErrors("rookieGoal")) {
+			boolean isSpam = config.isSpam(entity.getRookieGoal());
+			errors.state(request, !isSpam, "rookieGoal", "administrator.challenges.error.spam");
+		}
+
 		if (!errors.hasErrors("expertReward") && !errors.hasErrors("averageReward") && !errors.hasErrors("rookieReward")) {
 
 			Boolean eurZoneRookie = entity.getRookieReward().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
@@ -80,6 +111,11 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			errors.state(request, orderReward, "rookieReward", "administrator.challenges.error.rookieReward");
 			errors.state(request, orderReward, "averageReward", "administrator.challenges.error.averageReward");
 
+		}
+
+		if (!errors.hasErrors("deadline")) {
+			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
 		}
 
 	}

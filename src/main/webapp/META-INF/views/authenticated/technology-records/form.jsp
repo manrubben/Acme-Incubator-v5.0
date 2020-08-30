@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textbox code="authenticated.technology-records.form.label.title" path="title"/>
+	<acme:form-textbox code="authenticated.technology-records.form.label.title" path="title" />
 	<acme:form-textbox code="authenticated.technology-records.form.label.activitySector" path="activitySector"/>
 	<acme:form-textbox code="authenticated.technology-records.form.label.inventorsName" path="inventorsName"/>
 	<acme:form-textarea code="authenticated.technology-records.form.label.description" path="description"/>

@@ -1,4 +1,12 @@
-
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
 
 administrator.technology-records.form.button.update = Actualizar
 administrator.technology-records.form.button.show = Crear
@@ -14,15 +22,22 @@ administrator.technology-records.form.label.email = Email:
 administrator.technology-records.form.label.indication = Indicación:
 administrator.technology-records.form.label.stars = Estrellas:
 
-
-administrator.technology-records.list.label.title = Título:
-administrator.technology-records.list.label.activitySector = Sector de actividad:
-administrator.technology-records.list.label.inventorsName = Nombre del inventor:
-administrator.technology-records.list.label.description = Descripción:
+administrator.technology-records.list.label.title = Título
+administrator.technology-records.list.label.activitySector = Sector de actividad
+administrator.technology-records.list.label.stars = Estrellas
 
 administrator.technology-records.form.button.create = Crear
 administrator.technology-records.form.button.update = Actualizar
 administrator.technology-records.form.button.delete = Eliminar
 administrator.technology-records.form.button.return = Volver
 
-administrator.technology-records.list.label.title = Título
+administrator.technology-records.form.label.activitySector.technology = Tecnología
+administrator.technology-records.form.label.activitySector.science = Ciencia
+administrator.technology-records.form.label.activitySector.arts = Artes
+administrator.technology-records.form.label.activitySector.business = Negocios
+administrator.technology-records.form.label.activitySector.health = Salud
+
+administrator.technology-records.form.label.indication.open-source = Fuente abierta
+administrator.technology-records.form.label.indication.closed-source = Fuente cerrada
+
+administrator.technology-records.error.spam = Spam detectado

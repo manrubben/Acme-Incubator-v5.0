@@ -10,13 +10,13 @@
 
 # master.banner.welcome #######################################################
 
-master.banner.background = #FFE97F 
+master.banner.background = #f9f7ed
 
 ﻿# master.welcome ##############################################################
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
+	¡Bienvenidos a Acme Incubator!  Nunca antes ha sido tan sencillo desarrollar un \
 	proyecto y hacerlo funcionar.
 
 # master.menu #################################################################
@@ -29,12 +29,6 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link.manu = Enlace favorito de Manu
-master.menu.anonymous.favourite-link.adri = Enlace favorito de Adri
-master.menu.anonymous.favourite-link.ignacio = Enlace favorito de Ignacio
-master.menu.anonymous.favourite-link.alvaro = Enlace favorito de Alvaro
-master.menu.anonymous.favourite-link.josema = Enlace favorito de Josema
-master.menu.anonymous.favourite-link.guille = Enlace favorito de Guille
 master.menu.anonymous.tool-records.list = Listar registros de herramientas
 master.menu.anonymous.technology-records.list = Listar registros tecnológicos
 master.menu.anonymous.notices.list = Listar noticias
@@ -54,26 +48,26 @@ master.menu.authenticated.investment-round = Listar rondas de inversiones
 
 master.menu.entrepreneur = Empresario
 master.menu.entrepreneur.investmentRound.list-mine = Listar rondas de inversión
+master.menu.entrepreneur.investmentRound.create = Crear ronda de inversión
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notices = Listar noticias
-master.menu.administrator.create-tool-records = Crear registros de herramientas
+master.menu.administrator.create-tool-records = Crear registro de herramienta
 master.menu.administrator.list-tool-records = Listar registros de herramientas
 master.menu.administrator.technology-records.create = Crear registro tecnológico
-master.menu.administrator.technology-records.list = Listar registro tecnológico
+master.menu.administrator.technology-records.list = Listar registros tecnológicos
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.inquiries.list = Listar solicitudes
 master.menu.administrator.inquiries.create = Crear solicitud
-
 master.menu.administrator.notices.create = Crear noticia
-
 master.menu.administrator.challenges.list = Listar desafíos
 master.menu.administrator.challenges.create = Crear desafío
 master.menu.administrator.overtures.list = Listar propuestas
 master.menu.administrator.overtures.create = Crear propuesta
+master.menu.administrator.configuration = Listar parámetros de configuración 
 
 # master.menu.provider ########################################################
 
@@ -89,6 +83,7 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.investor = Inversor
 master.menu.investor.application.list-mine = Listar mis aplicaciones
+master.menu.investor.investment-round.list = Listar rondas de inversiones
 
 # master.menu.user-account ####################################################
 
@@ -98,6 +93,10 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-entrepreneur = Hazte empresario
+master.menu.user-account.entrepreneur = Datos de empresario
+master.menu.user-account.become-investor = Hazte inversor
+master.menu.user-account.investor = Datos de Inversor
 
 ﻿# master.footer ###############################################################
 
@@ -115,10 +114,10 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Starter Project, Inc. es una compañía fictícia que proporciona un proyecto \
+	Acme Incubator, Inc. es una compañía ficticia que proporciona un proyecto \
 	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Starter Project, Inc.
+master.company.name = Acme Incubator, Inc.
 master.company.address = Calle, número, Ciudad, Estado, País
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com

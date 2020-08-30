@@ -45,7 +45,7 @@ public class AdministratorNoticesListService implements AbstractListService<Admi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "headerPicture", "title", "creation", "deadline", "body", "links");
+		request.unbind(entity, model, "title", "creation");
 	}
 
 	@Override
