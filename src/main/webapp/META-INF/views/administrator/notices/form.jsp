@@ -25,7 +25,7 @@
 	
 	<acme:form-moment code="administrator.notices.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.notices.form.label.body" path="body"/>
-	<acme:form-url code="administrator.notices.form.label.links" path="links"/>
+	<acme:form-textbox code="administrator.notices.form.label.links" path="links"/>
 	
 	
 	<jstl:if test="${command =='create' }">
