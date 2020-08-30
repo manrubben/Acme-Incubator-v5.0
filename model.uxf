@@ -614,7 +614,7 @@ TechnologyRecords
 + website: String {URL, NotBlank, Length(max = 255)}
 + email: String {Email, NotBlank, Length(max = 255)}
 + indication: Indication {NotNull}
-+ stars: Integer {Min(value = -5), Max(value = -5)</panel_attributes>
++ stars: Integer {Min(value = -5), Max(value = 5)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -658,7 +658,7 @@ ToolRecords
 + website: String {URL, NotBlank, Length(max = 255)}
 + email: String {Email, NotBlank, Length(max = 255)}
 + indication: Indication {NotNull}
-+ stars: Integer {Min(value = -5), Max(value = -5)</panel_attributes>
++ stars: Integer {Min(value = -5), Max(value = 5)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
