@@ -20,13 +20,14 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.notices.list"
+				action="/anonymous/notices/list" />
 			<acme:menu-suboption
 				code="master.menu.anonymous.technology-records.list"
 				action="/anonymous/technology-records/list" />
 			<acme:menu-suboption code="master.menu.anonymous.tool-records.list"
 				action="/anonymous/tool-records/list" />
-			<acme:menu-suboption code="master.menu.anonymous.notices.list"
-				action="/anonymous/notices/list" />
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated"
