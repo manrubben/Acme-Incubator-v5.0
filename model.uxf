@@ -165,13 +165,14 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>520</x>
       <y>280</y>
-      <w>220</w>
-      <h>70</h>
+      <w>260</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
 --
-
++ LIST_INVESTMENT_ROUNDS_APP
++ LIST_BY_INVESTMENT_ROUNDS
 
 bg=orange</panel_attributes>
     <additional_attributes/>
@@ -369,7 +370,7 @@ pattern = "dd-MM-yyyy HH:mm"), Past, NotNull}
     <coordinates>
       <x>1790</x>
       <y>980</y>
-      <w>390</w>
+      <w>450</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
@@ -449,7 +450,7 @@ Entrepreneur
     <coordinates>
       <x>1270</x>
       <y>380</y>
-      <w>260</w>
+      <w>320</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
