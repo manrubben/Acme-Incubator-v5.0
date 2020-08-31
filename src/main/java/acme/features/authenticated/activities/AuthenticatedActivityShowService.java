@@ -8,7 +8,6 @@ import acme.entities.Activity;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -25,11 +24,9 @@ public class AuthenticatedActivityShowService implements AbstractShowService<Aut
 		boolean result = false;
 		int activityId;
 		Activity currentActivity;
-		Principal principal;
 
 		activityId = request.getModel().getInteger("id");
 		currentActivity = this.repository.findOneById(activityId);
-		principal = request.getPrincipal();
 
 		result = currentActivity.getInvestmentRound().getFinalMode() == true;
 
