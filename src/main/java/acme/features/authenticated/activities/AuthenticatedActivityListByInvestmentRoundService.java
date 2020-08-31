@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Activity;
+import acme.entities.InvestmentRound;
+import acme.features.authenticated.investmentRound.AuthenticatedInvestmentRoundRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -16,13 +18,26 @@ import acme.framework.services.AbstractListService;
 public class AuthenticatedActivityListByInvestmentRoundService implements AbstractListService<Authenticated, Activity> {
 
 	@Autowired
-	AuthenticatedActivityRepository repository;
+	AuthenticatedActivityRepository			activityRepository;
+
+	@Autowired
+	AuthenticatedInvestmentRoundRepository	investmentRoundRepository;
 
 
 	@Override
 	public boolean authorise(final Request<Activity> request) {
 		assert request != null;
-		return true;
+		boolean result;
+
+		int investmentRoundId;
+		InvestmentRound investmentRound;
+
+		investmentRoundId = request.getModel().getInteger("id");
+		investmentRound = this.investmentRoundRepository.findOneById(investmentRoundId);
+
+		result = investmentRound.getFinalMode();
+
+		return result;
 	}
 
 	@Override
@@ -45,7 +60,7 @@ public class AuthenticatedActivityListByInvestmentRoundService implements Abstra
 
 		id = request.getModel().getInteger("id");
 
-		result = this.repository.findManyByInvestmentRound(id);
+		result = this.activityRepository.findManyByInvestmentRound(id);
 		result.size();
 
 		return result;
