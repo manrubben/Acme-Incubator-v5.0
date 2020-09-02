@@ -115,7 +115,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 
 		if (!errors.hasErrors("deadline")) {
 			boolean isAfter1Month = entity.getDeadline().isAfter(LocalDateTime.now().plusMonths(1));
-			errors.state(request, isAfter1Month, "deadline", "administrator.challenges.error.deadlineAfter1Month");
+			errors.state(request, isAfter1Month, "deadline", "administrator.challenges.error.deadlineIsAfter1Month");
 
 		}
 
