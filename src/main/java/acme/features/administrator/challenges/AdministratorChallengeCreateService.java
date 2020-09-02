@@ -20,7 +20,6 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 	@Autowired
 	AdministratorChallengeRepository repository;
 
-
 	@Override
 	public boolean authorise(final Request<Challenges> request) {
 		assert request != null;
@@ -43,7 +42,8 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "expertGoal", "averageGoal", "rookieGoal", "expertReward", "averageReward", "rookieReward");
+		request.unbind(entity, model, "title", "deadline", "description", "expertGoal", "averageGoal", "rookieGoal",
+				"expertReward", "averageReward", "rookieReward");
 	}
 
 	@Override
@@ -89,7 +89,8 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 			errors.state(request, !isSpam, "rookieGoal", "administrator.challenges.error.spam");
 		}
 
-		if (!errors.hasErrors("expertReward") && !errors.hasErrors("averageReward") && !errors.hasErrors("rookieReward")) {
+		if (!errors.hasErrors("expertReward") && !errors.hasErrors("averageReward")
+				&& !errors.hasErrors("rookieReward")) {
 
 			Boolean eurZoneRookie = entity.getRookieReward().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
 			Boolean eurZoneAverage = entity.getAverageReward().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
@@ -100,9 +101,12 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 		}
 
-		if (!errors.hasErrors("expertReward") && !errors.hasErrors("averageReward") && !errors.hasErrors("rookieReward")) {
+		if (!errors.hasErrors("expertReward") && !errors.hasErrors("averageReward")
+				&& !errors.hasErrors("rookieReward")) {
 
-			Boolean orderReward = entity.getRookieReward().getAmount().compareTo(entity.getAverageReward().getAmount()) < 0 && entity.getAverageReward().getAmount().compareTo(entity.getExpertReward().getAmount()) < 0;
+			Boolean orderReward = entity.getRookieReward().getAmount()
+					.compareTo(entity.getAverageReward().getAmount()) < 0
+					&& entity.getAverageReward().getAmount().compareTo(entity.getExpertReward().getAmount()) < 0;
 
 			errors.state(request, orderReward, "rookieReward", "administrator.challenges.error.rookieReward");
 			errors.state(request, orderReward, "averageReward", "administrator.challenges.error.averageReward");
@@ -111,8 +115,11 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 		if (!errors.hasErrors("deadline")) {
 			boolean isAfter = entity.getDeadline().isAfter(LocalDateTime.now());
+			boolean isAfter30Days = entity.getDeadline().isAfter(LocalDateTime.now().plusMonths(1));
 			errors.state(request, isAfter, "deadline", "administrator.challenges.error.deadlineIsAfter");
-    }
+			errors.state(request, isAfter30Days, "deadline", "administrator.challenges.error.deadlineAfter30Days");
+
+		}
 
 	}
 

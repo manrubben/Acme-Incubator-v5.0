@@ -43,3 +43,4 @@ administrator.challenges.error.rookieReward = Rookie reward must be lower than A
 administrator.challenges.error.averageReward = Average reward must be lower than Expert reward
 administrator.challenges.error.deadlineIsAfter = Deadline must be after the current date
 administrator.challenges.error.spam = Spam detected
+administrator.challenges.error.deadlineAfter30Days = Deadline must be after 30 Days
