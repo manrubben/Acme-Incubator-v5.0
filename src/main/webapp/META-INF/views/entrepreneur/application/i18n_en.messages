@@ -17,6 +17,9 @@ entrepreneur.application.form.label.status.reject = REJECT
 entrepreneur.application.form.label.statement = Statement:
 entrepreneur.application.form.label.money = Money:
 entrepreneur.application.form.label.justification = Justification:
+entrepreneur.application.form.label.offer = Offer
+entrepreneur.application.form.label.link = Link
+entrepreneur.application.form.label.password = Password
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creation = Creation

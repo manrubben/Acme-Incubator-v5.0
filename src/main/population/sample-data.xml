@@ -299,6 +299,7 @@
 		<property name="money" value="00040000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
+		<property name="X1" value="carles" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
@@ -311,6 +312,7 @@
 		<property name="money" value="00060000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
 		<property name="finalMode" value="false" />
+		<property name="X1" value="carles" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
@@ -323,6 +325,7 @@
 		<property name="money" value="00070000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
+		<property name="X1" value="carles" />
 		<property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
 	</bean>
 	
@@ -335,6 +338,7 @@
 		<property name="money" value="00020000.00 EUR" />
 		<property name="link" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
+		<property name="X1" value="carles" />
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur" />
 	</bean>
 	
@@ -346,8 +350,12 @@
 		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a short statement" />
 		<property name="money" value="00040000.00 EUR" />
+		<property name="offer" value="offer1" />
+		<property name="link" value="https://www.youtube.com/watch?v=lgjguiFxtps" />
+		<property name="password" value="A1.aaaaaaa" />
 		<property name="investor" ref="investor1Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
+		
 	</bean>
 	
 	<bean name="application02" class="acme.entities.Application">
@@ -356,6 +364,9 @@
 		<property name="status" value="PENDING" />
 		<property name="statement" value="This is a sample statement" />
 		<property name="money" value="00030000.00 EUR" />
+		<property name="offer" value="offer1" />
+		<property name="link" value="https://www.youtube.com/watch?v=lgjguiFxtps" />
+		<property name="password" value="A1.aaaaaaa" />
 		<property name="investor" ref="investor2Investor" />
 		<property name="investmentRound" ref="investmentRound01" />
 	</bean>

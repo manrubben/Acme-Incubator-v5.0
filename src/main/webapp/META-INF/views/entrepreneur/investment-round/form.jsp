@@ -35,6 +35,7 @@
 	<acme:form-textarea code="entrepreneur.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="entrepreneur.investmentRound.form.label.money" path="money" />
 	<acme:form-url code="entrepreneur.investmentRound.form.label.link" path="link" />
+	<acme:form-textarea code="entrepreneur.investmentRound.form.label.X1" path="X1" />
 	
 	<jstl:if test="${command != 'create'}">
 	<acme:form-select code="entrepreneur.investmentRound.form.label.finalMode" path="finalMode">

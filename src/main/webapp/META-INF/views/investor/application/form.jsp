@@ -33,6 +33,12 @@
 	 
 	<acme:form-money code="investor.application.form.label.money" path="money"/>
 	
+	<acme:form-textarea code="investor.application.form.label.offer" path="offer"/>
+	
+	<acme:form-url code="investor.application.form.label.link" path="link"/>
+	
+	<acme:form-password code="investor.application.form.label.password" path="password"/>
+	
 	
 	<acme:form-submit code="investor.application.form.button.create" test="${command=='create'}"   action="/investor/application/create?InvestmentRoundId=${investmentRound.id}"/>
 	

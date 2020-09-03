@@ -12,6 +12,7 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import acme.entities.roles.Investor;
@@ -53,6 +54,15 @@ public class Application extends DomainEntity {
 
 	@Length(max = 255)
 	private String				justification;
+
+	@Length(max = 255)
+	private String				offer;
+
+	@URL
+	private String				link;
+
+	@Pattern(regexp = "(^$|^(?=(.*[a-zA-Z].*){1,})(?=(.*\\d.*){1,})(?=(.*\\W.*){1,})[a-zA-Z0-9\\S]{10,}$)", message = "{investor.application.error.password-pattern}")
+	private String				password;
 
 	// Relationships ----------------------------------------------------------
 

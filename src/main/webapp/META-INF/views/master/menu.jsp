@@ -32,7 +32,9 @@
 
 		<acme:menu-option code="master.menu.authenticated"
 			access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.list-notices"
+		
+			<acme:menu-suboption 
+			    code="master.menu.authenticated.list-notices"
 				action="/authenticated/notices/list" />
 			<acme:menu-suboption
 				code="master.menu.authenticated.list-technology-records"
@@ -57,6 +59,10 @@
 
 		<acme:menu-option code="master.menu.administrator"
 			access="hasRole('Administrator')">
+			
+			<acme:menu-suboption 
+			    code="master.menu.administrator.dashboard" 
+			    action="/administrator/dashboard/show" />
 			
 			<acme:menu-suboption code="master.menu.administrator.notices"
 				action="/administrator/notices/list" />

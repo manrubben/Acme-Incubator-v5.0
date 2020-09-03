@@ -56,7 +56,7 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "statement", "money", "investmentRound");
+		request.unbind(entity, model, "ticker", "statement", "money", "offer", "link", "password", "investmentRound");
 	}
 
 	@Override
@@ -93,6 +93,24 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		if (!errors.hasErrors("money")) {
 			Boolean isEur = entity.getMoney().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
 			errors.state(request, isEur, "money", "investor.application.error.money");
+		}
+
+		if (!errors.hasErrors("password")) {
+
+			Boolean activar = false;
+
+			Boolean isEmptyPass = entity.getPassword().isEmpty();
+			Boolean isEmptyLink = entity.getLink().isEmpty();
+			System.out.println("Pass es " + isEmptyPass);
+			System.out.println("Link es " + isEmptyLink);
+
+			if (isEmptyLink == true && isEmptyPass == false) {
+
+				activar = true;
+			}
+
+			errors.state(request, !activar, "password", "investor.application.error.password");
+
 		}
 
 	}

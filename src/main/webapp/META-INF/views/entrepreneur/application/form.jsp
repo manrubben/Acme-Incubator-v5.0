@@ -26,6 +26,23 @@
 	<acme:form-textarea readonly="true" code="entrepreneur.application.form.label.statement" path="statement" />
 	<acme:form-money readonly="true" code="entrepreneur.application.form.label.money" path="money" />
 	<acme:form-textarea code="entrepreneur.application.form.label.justification"  path="justification"/>
+	
+	<acme:form-textarea readonly="true" code="entrepreneur.application.form.label.offer"  path="offer"/>
+    
+   <jstl:if test="${password ==''}">
+    
+	<acme:form-url  readonly="true" code="entrepreneur.application.form.label.link"  path="link"/>
+	
+	</jstl:if>
+	
+	<jstl:if test="${password !=''}">
+    
+	<acme:form-password  readonly="true" code="entrepreneur.application.form.label.link"  path="link"/>
+	
+	</jstl:if>
+	
+	
+	
 	<acme:form-submit code="entrepreneur.application.form.button.update"  action="/entrepreneur/application/update?id=${id}"/>
 
 	<acme:form-return code="entrepreneur.application.form.button.return" />

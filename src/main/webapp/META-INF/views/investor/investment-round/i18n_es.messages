@@ -20,6 +20,7 @@ investor.investmentRound.form.label.description = Descripción:
 investor.investmentRound.form.label.money = Dinero:
 investor.investmentRound.form.label.link = Enlace:
 investor.investmentRound.form.label.finalMode = Modo Final:
+investor.investmentRound.form.label.X1 = X1
 
 investor.application.form.button.return = Volver
 

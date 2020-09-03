@@ -18,6 +18,7 @@ entrepreneur.investmentRound.form.label.title = Title:
 entrepreneur.investmentRound.form.label.description = Description:
 entrepreneur.investmentRound.form.label.money = Money:
 entrepreneur.investmentRound.form.label.link = Link:
+entrepreneur.investmentRound.form.label.X1 = X1
 
 entrepreneur.investmentRound.error.mensajeRechazo = It is not possible to publish the investment round.
 

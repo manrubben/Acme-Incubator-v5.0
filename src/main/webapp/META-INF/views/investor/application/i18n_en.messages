@@ -14,6 +14,9 @@ investor.application.form.label.status = Status:
 investor.application.form.label.statement = Statement:
 investor.application.form.label.money = Money:
 investor.application.form.label.justification = Justification:
+investor.application.form.label.offer = Offer
+investor.application.form.label.link = Link
+investor.application.form.label.password = Password
 
 investor.application.form.button.return = Return
 investor.application.form.button.create = Create
@@ -23,5 +26,7 @@ investor.application.list.label.creation = Creation
 investor.application.list.label.status = Status
 
 investor.application.error.ticker-pattern = Ticker must adhere to the following pattern: XXX-12-123456
+investor.application.error.password-pattern = Password must contain XXXX characters and that it includes at least XXXX letters, XXXX digits, and XXXX punctuation symbols.
 investor.application.error.spam = Spam detected
 investor.application.error.money = Money must be set in euros
+investor.application.error.password = Must write a link to write a password

@@ -34,6 +34,9 @@
 		code="authenticated.investment-round.form.label.money" path="money" />
 	<acme:form-textbox
 		code="authenticated.investment-round.form.label.link" path="link" />
+	<acme:form-textarea
+		code="authenticated.investment-round.form.label.X1"
+		path="X1" />	
 		
 	<acme:form-submit code="authenticated.investment-round.form.button.activity-list" method="get" 
 		action="/authenticated/activity/list-by-investment-rounds?id=${id}"/>

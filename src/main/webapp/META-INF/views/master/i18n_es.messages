@@ -68,6 +68,7 @@ master.menu.administrator.challenges.create = Crear desafío
 master.menu.administrator.overtures.list = Listar propuestas
 master.menu.administrator.overtures.create = Crear propuesta
 master.menu.administrator.configuration = Listar parámetros de configuración 
+master.menu.administrator.dashboard = Dashboard
 
 # master.menu.provider ########################################################
 

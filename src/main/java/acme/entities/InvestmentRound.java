@@ -62,6 +62,10 @@ public class InvestmentRound extends DomainEntity {
 	@NotNull
 	private Boolean				finalMode;
 
+	@NotBlank
+	@Length(max = 255)
+	private String				X1;
+
 	// Relationships ----------------------------------------------------------
 
 	@NotNull

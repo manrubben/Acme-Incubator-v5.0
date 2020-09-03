@@ -47,7 +47,7 @@ public class InvestorInvestmentRoundShowService implements AbstractShowService<I
 		model.setAttribute("isNotApped", isNotApped);
 		model.setAttribute("InvestmentRoundId", InvestmentRoundId);
 
-		request.unbind(entity, model, "ticker", "creation", "round", "title", "description", "money", "link", "finalMode");
+		request.unbind(entity, model, "ticker", "creation", "round", "title", "description", "money", "link", "finalMode", "X1");
 	}
 
 	@Override

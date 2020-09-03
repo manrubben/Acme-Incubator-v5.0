@@ -54,7 +54,7 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 		request.transfer(request.getModel(), "accept");
 		request.transfer(request.getModel(), "reject");
 
-		request.unbind(entity, model, "ticker", "creation", "status", "statement", "money", "justification");
+		request.unbind(entity, model, "ticker", "creation", "status", "statement", "money", "justification", "offer", "link", "password");
 
 	}
 

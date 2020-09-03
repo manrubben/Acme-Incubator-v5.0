@@ -30,7 +30,8 @@
 	<acme:form-textbox code="investor.investmentRound.form.label.title" path="title" />
 	<acme:form-textarea code="investor.investmentRound.form.label.description" path="description" />
 	<acme:form-money code="investor.investmentRound.form.label.money" path="money" />
-	<acme:form-url code="investor.investmentRound.form.label.link" path="link" />	
+	<acme:form-url code="investor.investmentRound.form.label.link" path="link" />
+	<acme:form-textarea code="investor.investmentRound.form.label.X1" path="X1" />	
 	<jstl:if test="${isNotApped }">
 	<acme:form-submit code="investor.app.investmenRound.button" method="get"  action="/investor/application/create?InvestmentRoundId=${id}"/>
 	</jstl:if>

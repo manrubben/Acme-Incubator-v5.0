@@ -14,6 +14,9 @@ investor.application.form.label.status = Estado:
 investor.application.form.label.statement = Declaración:
 investor.application.form.label.money = Dinero:
 investor.application.form.label.justification = Justificación:
+investor.application.form.label.offer = Oferta
+investor.application.form.label.link = Link
+investor.application.form.label.password = Contraseña
 
 investor.application.form.button.return = Volver
 investor.application.form.button.create = Crear
@@ -23,5 +26,7 @@ investor.application.list.label.creation = Creación
 investor.application.list.label.status = Estado
 
 investor.application.error.ticker-pattern = El ticker debe cumplir con el siguiente patrón: XXX-12-123456
+investor.application.error.password-pattern = La contraseña debe ser XXXX de longitud  y debe contener XXXX letras, XXXX números, y XXXX simbolos de puntución.
 investor.application.error.spam = Spam detectado
+investor.application.error.password = Debes haber escrito un link para poder escribir una contraseña
 investor.application.error.money = La moneda debe estar en euros
